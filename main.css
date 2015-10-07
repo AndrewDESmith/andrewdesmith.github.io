@@ -1,0 +1,122 @@
+/* Main CSS styling. */
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+   width: device-width;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #1D1D1D;
+  color: #dddddd;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  padding: 20px 20px 20px 20px;
+  margin: 0 0 50px 0;
+  text-align: center;
+  border-bottom: 2px solid #dddddd;
+  font-size: 22px;
+  white-space: nowrap;
+}
+
+nav a {
+  color: #FD9308;
+  font-family: "Fredoka One", sans-serif;
+  text-decoration: none;
+  margin: 0 10px 0 10px;
+  padding: 0 5px 0 5px;
+}
+
+section, .contact {
+  font-family: "Rokkitt", serif;
+  padding: 0 10px 0 10px;
+}
+
+.contact {
+  display: inline-block;
+  clear: both;
+  max-width: 60%;
+  white-space: nowrap;
+}
+
+.contact a {
+  color: #FD9308;
+  text-decoration: none;
+  clear: both;
+}
+
+#about-me, #contact-block {
+  display: block;
+  max-width: 60%;
+  text-align: justify;
+  margin: 0 auto;
+  clear: both;
+  margin-bottom: 20px;
+}
+
+#choices, #psycho-caption {
+  max-width: 60%;
+  display: inline-block;
+  margin: 0 auto 0 auto;
+}
+
+#choices {
+  border: 1px solid #dddddd;
+}
+
+#choices:hover {
+  border: 2px solid #FD9308;
+}
+
+#resume-image:hover {
+  border: 2px solid #FE4B03;
+}
+
+#email {
+  margin-bottom: 5px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 0;
+  padding-left: 0;
+  clear: both;
+  text-transform: uppercase;
+}
+
+#phone, #github {
+  margin: 0 auto;
+  padding-top: 5px;
+  padding-left: 0;
+  clear: both;
+  text-transform: uppercase;
+}
+
+#email a, #phone a, #github a {
+  text-transform: none;
+}
+
+#psycho-caption {
+  text-align: justify;
+  padding: 10px 0 0 0;
+  margin: 0 auto 10px auto;
+  font-style: italic;
+}
+
+#resume {
+  padding-bottom: 50px;
+}
+
+a:hover, #resume a:hover {
+  color: #FFC78A;
+}
