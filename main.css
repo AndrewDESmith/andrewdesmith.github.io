@@ -120,6 +120,7 @@ section, .contact {
 }
 
 #psycho-caption {
+  color: #dddddd;
   background-color: rgba(0,0,0,0.6);
   text-align: justify;
   padding: 10px 10px 10px 10px;
