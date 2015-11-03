@@ -18,8 +18,14 @@
     padding: 5px 0 0 0;
   }
 
+.index-box {
+  max-width: 90%;
+  padding: 20px 0 20px 0;
+}
+
   #about-me, #contact-block {
     max-width: 80%;
+    text-align: left
   }
 
   #choices, #psycho-caption {
@@ -62,8 +68,14 @@
     padding: 10px 0 0 0;
   }
 
+  .index-box {
+    max-width: 90%;
+    padding: 20px 0 20px 0;
+  }
+
   #about-me, #contact-block {
     max-width: 80%;
+    text-align: left;
   }
 
   #github {
