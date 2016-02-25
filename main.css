@@ -94,16 +94,16 @@ section, .contact {
   margin-bottom: 20px;
 }
 
-#choices, #nomster-image, #chess-workout-image, #psycho-caption, #nomster-caption, #chess-workout-caption {
+#choices, #flixter-image, #nomster-image, #chess-workout-image, #psycho-caption, #flixter-caption, #nomster-caption, #chess-workout-caption {
   display: inline-block;
   margin: 0 auto 0 auto;
 }
 
-#choices, #nomster-image, #chess-workout-image {
+#choices, #nomster-image, #flixter-image, #chess-workout-image {
   border: 1px solid #dddddd;
 }
 
-#choices:hover, #nomster-image:hover, #chess-workout-image:hover {
+#choices:hover, #nomster-image:hover, #flixter-image:hover, #chess-workout-image:hover {
   border: 2px solid #FD9308;
 }
 
@@ -132,7 +132,7 @@ section, .contact {
   text-transform: none;
 }
 
-#psycho-caption, #nomster-caption, #chess-workout-caption {
+#psycho-caption, #nomster-caption, #flixter-caption, #chess-workout-caption {
   color: #dddddd;
   text-align: justify;
   padding: 10px 10px 10px 10px;

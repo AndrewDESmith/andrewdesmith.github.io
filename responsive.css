@@ -19,8 +19,10 @@
   }
 
   .index-box {
-    max-width: 90%;
-    padding: 20px 0 20px 0;
+    max-width: 85%;
+    /*padding: 20px 0 20px 0;*/
+    padding: 10px 10px 10px 10px;
+    margin: 0 auto 10px auto;
   }
 
   #about-me, #contact-block {
@@ -28,8 +30,8 @@
     text-align: left
   }
 
-  #choices, #chess-workout-image, #nomster-image, #psycho-caption, #nomster-caption {
-    max-width: 90%;
+  #choices, #chess-workout-image, #flixter-image, #nomster-image, #psycho-caption, #nomster-caption, #flixter-caption {
+    width: 90%;
   }
 
   #email {
@@ -65,8 +67,8 @@
     font-size: 24px;
   }
 
-  #choices, #nomster-image, #chess-workout-image, #psycho-caption, #nomster-caption, #chess-workout-caption {
-    max-width: 90%;
+  #choices, #nomster-image, #flixter-image, #chess-workout-image, #psycho-caption, #nomster-caption, #flixter-caption, #chess-workout-caption {
+    width: 90%;
   }
 
   .about {
@@ -81,8 +83,10 @@
   }
 
   .index-box {
-    max-width: 90%;
-    padding: 20px 0 20px 0;
+    max-width: 80%;
+    /*padding: 20px 0 20px 0;*/
+    padding: 10px 10px 10px 10px;
+    margin: 0 auto 10px auto;
   }
 
   #about-me, #contact-block {
@@ -127,7 +131,7 @@
     font-size: 250%;
   }
 
-  #nomster-image {
+  #choices, #nomster-image, #flixter-image, #chess-workout-image {
     width: 65%;
   }
 
@@ -143,7 +147,8 @@
   padding-bottom: 15px;
   }
 
-  #psycho-caption, #nomster-caption, #chess-workout-caption {
+  #psycho-caption, #nomster-caption, #flixter-caption, #chess-workout-caption {
+    width: 65%;
     font-size: 125%;
   }
 
