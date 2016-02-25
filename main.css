@@ -71,6 +71,20 @@ section, .contact {
   clear: both;
 }
 
+.portfolio-heading {
+  color: #eeeeee;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+}
+
+#portfolio {
+  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.6);
+  padding: 10px 10px 10px 10px;
+  margin: 0 auto 10px auto;
+  max-width: 70%;
+}
+
 #about-me, #contact-block {
   display: block;
   max-width: 60%;
@@ -80,17 +94,16 @@ section, .contact {
   margin-bottom: 20px;
 }
 
-#choices, #psycho-caption {
-  max-width: 60%;
+#choices, #nomster-image, #psycho-caption {
   display: inline-block;
   margin: 0 auto 0 auto;
 }
 
-#choices {
+#choices, #nomster-image {
   border: 1px solid #dddddd;
 }
 
-#choices:hover {
+#choices:hover, #nomster-image:hover {
   border: 2px solid #FD9308;
 }
 
@@ -121,7 +134,7 @@ section, .contact {
 
 #psycho-caption {
   color: #dddddd;
-  background-color: rgba(0,0,0,0.6);
+  /*background-color: rgba(0,0,0,0.6);*/
   text-align: justify;
   padding: 10px 10px 10px 10px;
   margin: 0 auto 10px auto;

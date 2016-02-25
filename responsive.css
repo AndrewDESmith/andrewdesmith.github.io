@@ -28,7 +28,7 @@
     text-align: left
   }
 
-  #choices, #psycho-caption {
+  #choices, #nomster-image, #psycho-caption {
     max-width: 90%;
   }
 
@@ -40,9 +40,21 @@
     padding-bottom: 15px;
   }
 
+  #portfolio {
+    max-width: 85%;
+  }
+
   #resume-image {
     max-height: 60%;
     max-width: 60%;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  h2 {
+    display: block;
   }
 }
 
@@ -53,8 +65,8 @@
     font-size: 24px;
   }
 
-  #choices, #psycho-caption {
-    max-width: 75%;
+  #choices, #nomster-image, #psycho-caption {
+    max-width: 90%;
   }
 
   .about {
@@ -82,9 +94,21 @@
     padding-bottom: 15px;
   }
 
+  #portfolio {
+    max-width: 80%;
+  }
+
   #resume-image {
     max-height: 65%;
     max-width: 65%;
+  }
+
+  h1 {
+    display: block;
+  }
+
+  h2 {
+    display: none;
   }
 }
 
@@ -99,8 +123,12 @@
     display: inline;
   }
 
-  #choices, #psycho-caption {
-    max-width: 55%;
+  .portfolio-heading {
+    font-size: 250%;
+  }
+
+  #nomster-image {
+    width: 65%;
   }
 
   #about-me, #contact-block {
@@ -111,6 +139,14 @@
   padding-bottom: 15px;
   }
 
+  #nomster-caption {
+    font-size: 125%;
+  }
+
+  #psycho-caption {
+    font-size: 125%;
+  }
+
   #resume {
     padding-bottom: 10px;
   }
@@ -118,5 +154,13 @@
   #resume-image {
     max-height: 75%;
     width: auto;
+  }
+
+  h1 {
+    display: block;
+  }
+
+  h2 {
+    display: none;
   }
 }
