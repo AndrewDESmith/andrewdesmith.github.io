@@ -18,17 +18,17 @@
     padding: 5px 0 0 0;
   }
 
-.index-box {
-  max-width: 90%;
-  padding: 20px 0 20px 0;
-}
+  .index-box {
+    max-width: 90%;
+    padding: 20px 0 20px 0;
+  }
 
   #about-me, #contact-block {
     max-width: 80%;
     text-align: left
   }
 
-  #choices, #nomster-image, #psycho-caption {
+  #choices, #chess-workout-image, #nomster-image, #psycho-caption, #nomster-caption {
     max-width: 90%;
   }
 
@@ -65,7 +65,7 @@
     font-size: 24px;
   }
 
-  #choices, #nomster-image, #psycho-caption {
+  #choices, #nomster-image, #chess-workout-image, #psycho-caption, #nomster-caption, #chess-workout-caption {
     max-width: 90%;
   }
 
@@ -135,15 +135,15 @@
     max-width: 60%;
   }
 
+  #about-me p {
+    font-size: 125%;
+  }
+
   #github {
   padding-bottom: 15px;
   }
 
-  #nomster-caption {
-    font-size: 125%;
-  }
-
-  #psycho-caption {
+  #psycho-caption, #nomster-caption, #chess-workout-caption {
     font-size: 125%;
   }
 
