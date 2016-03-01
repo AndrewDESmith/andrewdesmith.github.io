@@ -54,6 +54,7 @@ section, .contact {
   text-decoration: none;
   color: white;
   font-weight: 900;
+  text-shadow: 1px 1px #FD9308;
 }
 
 .contact {
