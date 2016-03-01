@@ -36,9 +36,11 @@ nav {
 }
 
 nav a {
-  color: #FD9308;
+  /*color: #FD9308;*/
+  color: #FFA500;
   font-family: "Fredoka One", sans-serif;
   text-decoration: none;
+  text-shadow: 2px 2px #000000;
   margin: 0 10px 0 10px;
   padding: 0 5px 0 5px;
 }
