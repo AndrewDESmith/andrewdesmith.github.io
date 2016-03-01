@@ -50,6 +50,12 @@ section, .contact {
   padding: 0 10px 0 10px;
 }
 
+.app-title a {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+}
+
 .contact {
   display: inline-block;
   clear: both;
