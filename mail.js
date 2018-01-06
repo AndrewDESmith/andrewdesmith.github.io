@@ -1,12 +1,12 @@
-var name = "andrew.d.e.smith";
+var name = "andrewdesmith";
 var atsign = "@";
-var virtual_domain = "gmail";
+var virtual_domain = "protonmail";
 var dotcom = ".com";
 
 document.write("<div align=left>E-mail: ");
 
 document.write("<a href=mailto:", name + atsign +
-virtual_domain + dotcom, ">andrew.d.e.smith AT gmail DOT com</a>");
+virtual_domain + dotcom, ">andrewdesmith AT protonmail DOT com</a>");
 
 document.write("</div>");
 
