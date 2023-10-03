@@ -1,0 +1,99 @@
+<!-- ########################################## -->
+<!-- INSTRUCTIONS -->
+
+<!-- Compile CSS when tailwind configuration is altered, classes are extracted into @apply, or you are ready for production (remember to first set purge to true in tailwind.config.js):
+  $ npx tailwindcss-cli@latest build ./stylesheets/main.css -o ./dist/tailwind.css-->
+
+<!-- Hot reload:
+  One time global setup:
+  $ npm install -g live-server
+
+  Usage:
+  $ live-server
+-->
+
+<!-- Autoformat Tailwind CSS classes (sort them here):
+  One time local setup:
+  $ npm install --save-dev --save-exact prettier
+  $ npm install prettier-plugin-tailwind
+
+  Usage:
+  $ npx prettier --write .
+  --or--
+  (Target specific files)
+  $ npx prettier --write index.html
+-->
+<!-- ########################################## -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="dist/tailwind.css" rel="stylesheet" />
+    <title>Andrew D.E. Smith, Software Developer</title>
+  </head>
+  <body>
+    <nav class="float-right mr-16 mb-12 mt-8">
+      <span class="text-xl">Skills |</span>
+      <span class="text-xl">Projects |</span>
+      <span class="text-xl">About Me & Contact</span>
+    </nav>
+    <h1 class="flex justify-center clear-right text-5xl mb-2">Projects</h1>
+    <p class="flex justify-center mb-10">
+      Click on a project's image for more details.
+    </p>
+
+    <!-- 2 column grid of projects -->
+    <div class="grid grid-cols-2 gap-x-16 justify-items-center ml-10 mr-10">
+      <div class="flex flex-col mb-12">
+        <h2 class="flex justify-center text-3xl mb-4">
+          Better File Review Status
+        </h2>
+        <img
+          src="images/screenshots/better-file-review-status/Data Analyst Portal Ready for Dismissal.png"
+          alt="Better File Review Status Image Carousel"
+        />
+      </div>
+      <div class="flex flex-col mb-12">
+        <h2 class="flex justify-center text-3xl mb-4">Sentiment Analysis</h2>
+        <img
+          src="images/screenshots/sentiment-analysis/Sentiment Analysis.png"
+          alt="Sentiment Analysis Image Carousel"
+        />
+      </div>
+      <div class="flex flex-col mb-12">
+        <h2 class="flex justify-center text-3xl mb-4">
+          Custom Logging Interface
+        </h2>
+        <img
+          src="images/logos/ruby-on-rails-logo.svg"
+          alt="Custom Logging Interface Image Carousel"
+        />
+      </div>
+      <div class="flex flex-col mb-12">
+        <h2 class="flex justify-center text-3xl mb-4">Job Ad Builder</h2>
+        <img
+          src="images/logos/ruby-on-rails-logo.svg"
+          alt="Job Ad Builder Image Carousel"
+        />
+      </div>
+      <div class="flex flex-col mb-12">
+        <h2 class="flex justify-center text-3xl mb-4">Facebook Jobs API</h2>
+        <img
+          src="images/logos/ruby-on-rails-logo.svg"
+          alt="Facebook Jobs API Image Carousel"
+        />
+      </div>
+      <div class="flex flex-col mb-12">
+        <h2 class="flex justify-center text-3xl mb-4">
+          Job Applications: Psychometric Tests
+        </h2>
+        <img
+          src="images/logos/ruby-on-rails-logo.svg"
+          alt="Job Applications Psychometric Tests Image Carousel"
+        />
+      </div>
+    </div>
+  </body>
+</html>
