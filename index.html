@@ -2,7 +2,8 @@
 <!-- INSTRUCTIONS -->
 
 <!-- Compile CSS when tailwind configuration is altered, classes are extracted into @apply, or you are ready for production (remember to first set purge to true in tailwind.config.js):
-  $ npx tailwindcss-cli@latest build ./stylesheets/main.css -o ./dist/tailwind.css-->
+  $ npx tailwindcss-cli@latest build -i ./stylesheets/main.css -o ./dist/tailwind.css
+-->
 
 <!-- Hot reload:
   One time global setup:
@@ -32,6 +33,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="dist/tailwind.css" rel="stylesheet" />
     <title>Andrew D.E. Smith, Software Developer</title>
+    <link
+      rel="shortcut icon"
+      type="image/svg"
+      href="images/favicons/neon-window-frames-square-crop.svg"
+    />
   </head>
   <body>
     <nav class="float-right mr-16 mb-12 mt-8">
@@ -42,8 +48,10 @@
       </span>
       <span class="text-xl">Blog</span>
     </nav>
-    <h1 class="flex justify-center clear-right text-5xl mb-2">Projects</h1>
-    <p class="flex justify-center mb-10">
+    <h1 class="flex justify-center clear-right text-5xl mb-2 font-secularOne">
+      Projects
+    </h1>
+    <p class="flex justify-center mb-10 font-gelasio">
       Click on a project's image for more details.
     </p>
 
@@ -53,7 +61,7 @@
         class="grid grid-cols-2 gap-x-24 justify-items-center mx-16 max-w-7xl"
       >
         <div class="flex flex-col mb-12">
-          <h2 class="flex justify-center text-3xl mb-4">
+          <h2 class="flex justify-center text-3xl mb-4 font-secularOne">
             Better File Review Status
           </h2>
           <img
@@ -62,14 +70,16 @@
           />
         </div>
         <div class="flex flex-col mb-12">
-          <h2 class="flex justify-center text-3xl mb-4">Sentiment Analysis</h2>
+          <h2 class="flex justify-center text-3xl mb-4 font-secularOne">
+            Sentiment Analysis
+          </h2>
           <img
             src="images/screenshots/sentiment-analysis/Sentiment Analysis.png"
             alt="Sentiment Analysis Image Carousel"
           />
         </div>
         <div class="flex flex-col mb-12">
-          <h2 class="flex justify-center text-3xl mb-4">
+          <h2 class="flex justify-center text-3xl mb-4 font-secularOne">
             Custom Logging Interface
           </h2>
           <img
@@ -78,21 +88,25 @@
           />
         </div>
         <div class="flex flex-col mb-12">
-          <h2 class="flex justify-center text-3xl mb-4">Job Ad Builder</h2>
+          <h2 class="flex justify-center text-3xl mb-4 font-secularOne">
+            Job Ad Builder
+          </h2>
           <img
             src="images/logos/ruby-on-rails-logo.svg"
             alt="Job Ad Builder Image Carousel"
           />
         </div>
         <div class="flex flex-col mb-12">
-          <h2 class="flex justify-center text-3xl mb-4">Facebook Jobs API</h2>
+          <h2 class="flex justify-center text-3xl mb-4 font-secularOne">
+            Facebook Jobs API
+          </h2>
           <img
             src="images/logos/ruby-on-rails-logo.svg"
             alt="Facebook Jobs API Image Carousel"
           />
         </div>
         <div class="flex flex-col mb-12">
-          <h2 class="flex justify-center text-3xl mb-4">
+          <h2 class="flex justify-center text-3xl mb-4 font-secularOne">
             Job Applications: Psychometric Tests
           </h2>
           <img

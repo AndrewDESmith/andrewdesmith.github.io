@@ -8,6 +8,66 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // From canva.com/learn/website-color-schemes
+        // Website color scheme #41
+        // Bold feature colors
+        // coral: "#E14658",
+        coral: {
+          50: "#FCEDEF",
+          100: "#F9DCDF",
+          200: "#F3B4BC",
+          300: "#ED919C",
+          400: "#E76A78",
+          500: "#E14658",
+          600: "#CA2134",
+          700: "#9A1928",
+          800: "#65101A",
+          900: "#35090E",
+          950: "#1A0407"
+        },
+        navy: {
+          50: "#E8EAED",
+          100: "#CED1D9",
+          200: "#9DA4B3",
+          300: "#6D778D",
+          400: "#474D5C",
+          500: "#22252C",
+          600: "#1B1D23",
+          700: "#14161A",
+          800: "#0D0F11",
+          900: "#070709",
+          950: "#040506"
+        },
+        mountain: {
+          50: "#EDE9F1",
+          100: "#D8D0E2",
+          200: "#B0A1C4",
+          300: "#8972A7",
+          400: "#634E7E",
+          500: "#3F3250",
+          600: "#31273F",
+          700: "#251D2F",
+          800: "#19141F",
+          900: "#0C0A10",
+          950: "#070609"
+        },
+        scrub: {
+          50: "#F9F8F6",
+          100: "#F3F0ED",
+          200: "#E7E2DA",
+          300: "#D8D1C5",
+          400: "#CCC2B2",
+          500: "#C0B3A0",
+          600: "#A49175",
+          700: "#7E6D53",
+          800: "#564A39",
+          900: "#2B251C",
+          950: "#15130E"
+        },
+        // navy: "#22252C",
+        // mountain: "#3F3250",
+        // scrub: "#C0B3A0",
+
         // Palette 9
         // Primary
         // These are the splashes of color that should appear the most in your UI, and are the ones that determine the overall "look" of the site. Use these for things like primary actions, links, navigation items, icons, accent borders, or text you want to emphasize.
@@ -82,24 +142,20 @@ module.exports = {
         "teal-900": "#014D40"
       },
       fontFamily: {
-        heading: ["Tangerine", "cursive"],
+        heading: ["Secular One", "sans-serif"],
         body: [
-          "Raleway",
-          "ui-sans-serif",
+          "Gelasio Regular",
+          "ui-serif",
           "system-ui",
           "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Arial",
-          "Noto Sans",
-          "sans-serif",
-          "Apple Color Emoji",
-          "Segoe UI Emoji",
-          "Segoe UI Symbol",
-          "Noto Color Emoji"
-        ]
+          "serif"
+        ],
+        secularOne: ["Secular One", "sans-serif"],
+        gelasio: ["Gelasio Regular", "serif"],
+        gelasioMedium: ["Gelasio Medium", "serif"],
+        gelasioSemiBold: ["Gelasio SemiBold", "serif"],
+        gelasioBold: ["Gelasio Bold", "serif"],
+        gelasioItalic: ["Gelasio Italic", "serif"]
       }
     }
   },

@@ -3,6 +3,36 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Secular One";
+  src: url("../fonts/secular-one/SecularOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Gelasio Regular";
+  src: url("../fonts/gelasio/Gelasio-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Gelasio Bold";
+  src: url("../fonts/gelasio/Gelasio-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Gelasio SemiBold";
+  src: url("../fonts/gelasio/Gelasio-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Gelasio Medium";
+  src: url("../fonts/gelasio/Gelasio-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Gelasio Italic";
+  src: url("../fonts/gelasio/Gelasio-Italic.ttf");
+}
+
 @layer base {
   /*  h1 {
     @apply text-2xl;
