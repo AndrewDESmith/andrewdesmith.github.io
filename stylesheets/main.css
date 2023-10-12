@@ -33,6 +33,16 @@
   src: url("../fonts/gelasio/Gelasio-Italic.ttf");
 }
 
+@font-face {
+  font-family: "Play Regular";
+  src: url("../fonts/play/Play-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Play Bold";
+  src: url("../fonts/play/Play-Bold.ttf");
+}
+
 @layer base {
   /*  h1 {
     @apply text-2xl;

@@ -155,7 +155,9 @@ module.exports = {
         gelasioMedium: ["Gelasio Medium", "serif"],
         gelasioSemiBold: ["Gelasio SemiBold", "serif"],
         gelasioBold: ["Gelasio Bold", "serif"],
-        gelasioItalic: ["Gelasio Italic", "serif"]
+        gelasioItalic: ["Gelasio Italic", "serif"],
+        play: ["Play Regular", "sans-serif"],
+        playBold: ["Play Bold", "sans-serif"]
       }
     }
   },
