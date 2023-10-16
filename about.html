@@ -12,113 +12,104 @@
 
     <title>Andrew D.E. Smith, Software Developer</title>
   </head>
-  <body>
-    <nav class="float-right mr-16 mb-12 mt-8">
-      <span class="text-xl font-play"><a href="/">Projects</a> |</span>
-      <span class="text-xl font-play"><a href="/skills.html">Skills</a> |</span>
-      <span class="text-xl font-playBold">About Me & Contact |</span>
-      <span class="text-xl font-play">Blog</span>
-    </nav>
-    <h1 class="flex justify-center clear-right text-5xl mb-10 font-secularOne">
-      Contact
-    </h1>
-    <div class="flex justify-center">
-      <div class="grid grid-cols-2 justify-items-center mb-16 gap-x-80">
-        <a href="mailto:andrewdesmith@protonmail.com" class="flex">
-          <img
-            src="images/logos/email-logo-black.svg"
-            width="35px"
-            class="mr-2"
-            alt="Email logo"
-          />
-          <span class="text-3xl font-gelasioMedium">Email</span>
-        </a>
-        <a href="https://www.linkedin.com/in/andrew-d-e-smith" class="flex">
-          <img
-            src="images/logos/linkedin-logo.svg"
-            width="35px"
-            class="mr-2"
-            alt="LinkedIn logo"
-          />
-          <span class="text-3xl font-gelasioMedium">LinkedIn</span>
-        </a>
+  <body class="bg-lightGray-50 hero-pattern">
+    <div class="container-content" style="position: relative">
+      <nav class="float-right mr-16 mb-12 mt-8">
+        <span class="text-xl font-play text-ink-400"
+          ><a href="/" class="hover:text-ink-300">Projects</a> |</span
+        >
+        <span class="text-xl font-play text-ink-400"
+          ><a href="/skills.html" class="hover:text-ink-300">Skills</a> |</span
+        >
+        <span class="text-xl font-playBold text-ink-400"
+          >About Me & Contact</span
+        >
+      </nav>
+      <h1
+        class="flex justify-center clear-right text-5xl mb-10 font-secularOne text-ember-500"
+      >
+        Contact
+      </h1>
+      <div class="flex justify-center">
+        <div class="grid grid-cols-2 justify-items-center mb-16 gap-x-80">
+          <a href="mailto:andrewdesmith@protonmail.com" class="flex group">
+            <img
+              src="images/logos/email-logo-black.svg"
+              width="35px"
+              class="mr-2"
+              alt="Email logo"
+            />
+            <span
+              class="text-3xl font-gelasioMedium text-ink-400 group-hover:text-ink-300"
+              >Email</span
+            >
+          </a>
+          <a
+            href="https://www.linkedin.com/in/andrew-d-e-smith"
+            class="flex group"
+          >
+            <img
+              src="images/logos/linkedin-logo.svg"
+              width="35px"
+              class="mr-2"
+              alt="LinkedIn logo"
+            />
+            <span
+              class="text-3xl font-gelasioMedium text-ink-400 group-hover:text-ink-300"
+              >LinkedIn</span
+            >
+          </a>
+        </div>
       </div>
-    </div>
-    <h1 class="flex justify-center clear-right text-5xl mb-10 font-secularOne">
-      About Me
-    </h1>
-    <div class="grid grid-cols-1 justify-items-center">
-      <span class="ml-10 mr-10 max-w-5xl">
-        <p class="text-lg mb-2 font-gelasio">
-          I’ve been working in full-stack development professionally since 2016,
-          my main tools being Ruby on Rails and the ecosystem of skills and
-          technologies that surround that. I lean more towards the backend in my
-          experience, but have done front end and full-stack projects using
-          React, vanilla JavaScript, and the old workhouse that was jQuery.
-          Similarly, I’m competent in several forms of CSS, including libraries
-          such as Bootstrap and Tailwind.
-        </p>
-      </span>
-      <span class="ml-10 mr-10 max-w-5xl">
-        <p class="text-lg mb-4 font-gelasio">
-          My developer career began with an internship at a travel startup,
-          where I primarily did front end work, but was also exposed to some
-          Python and Django. Following that, I had two back-end focused contract
-          positions using Ruby and Rails, working on a real estate application
-          and a stock exchange app respectively. My first permanent developer
-          position was within a small division of a private mid-sized
-          recruitment firm, where I worked with the lead developer and
-          eventually wore many hats, eventually assuming primary responsibility
-          for this firm’s small and medium business self-serve recruitment
-          software. After two and a half years there, I moved on with a desire
-          to assume more responsibility and learn newer technologies, working in
-          more senior full-stack positions on an email and LinkedIn sales
-          campaign application, and most recently on software for brokers
-          working in commercial real estate transactions.
-        </p>
-      </span>
-      <span class="ml-10 mr-10 max-w-5xl">
-        <p class="text-lg mb-4 font-gelasio">
-          I’ve worked in both feature creation and maintenance, and have seen
-          setups ranging from the newest and hottest to 10+ year old beasts
-          running dead libraries and frameworks, such as
-          <a href="https://github.com/hobo/hobo">“Hobo”</a>. I’m a generalist
-          who favours making code as consistent and comprehensible as possible.
-          I value coherent writing and “idiot proofing”, and put these into
-          practice wherever it is feasible.
-        </p>
-      </span>
-      <span class="ml-10 mr-10 max-w-5xl">
-        <p class="text-lg mb-2 font-gelasio">
-          Some of the more notable projects that I’ve worked on:
-        </p>
-        <p class="text-lg mb-1 font-gelasio">
-          – A job ad creator for recruiters. Essentially a “lego kit” of
-          components of job ads, which used a shared, curated, editable and
-          searchable set of “snippets” of parts of job ads, allowing for
-          standardized rapid write ups for job postings.
-        </p>
-        <p class="text-lg mb-1 font-gelasio">
-          – A major upgrade of a 2011 era Rails 3.2 + Ruby 1.9 medium-sized
-          application to Rails 4.2 and Ruby 2.5.
-        </p>
-        <p class="text-lg mb-1 font-gelasio">
-          – A custom logging interface for massive interactor objects in a Rails
-          and React application. We had no usable production logs before this
-          project. Afterwards, we could hone in on crucial production debugging
-          information.
-        </p>
-        <p class="text-lg mb-1 font-gelasio">
-          – Led a team of three developers to work on both the front and back
-          ends of a Rails/React feature, constructing an uploaded file
-          processing status view for an application’s email inbox, and syncing
-          it up with matching back-office file processing controls. E.g., For a
-          commercial real estate deal, the user could upload a set of building
-          layout files to add to the deal’s page, and view the status of this
-          file’s acceptance, rejection, modification, etc. by the application’s
-          back office data team.
-        </p>
-      </span>
+      <h1
+        class="flex justify-center clear-right text-5xl mb-10 font-secularOne text-ember-500"
+      >
+        About Me
+      </h1>
+      <div class="grid grid-cols-1 justify-items-center">
+        <span class="ml-10 mr-10 max-w-5xl">
+          <p class="text-lg mb-2 font-gelasio text-ink-500">
+            I’ve been working in full-stack development professionally since
+            2016, my main tools being Ruby on Rails and the ecosystem of skills
+            and technologies that surround that. I lean more towards the backend
+            in my experience, but have done front end and full-stack projects
+            using React, vanilla JavaScript, and the old workhouse that was
+            jQuery. Similarly, I’m competent in several forms of CSS, including
+            libraries such as Bootstrap and Tailwind.
+          </p>
+        </span>
+        <span class="ml-10 mr-10 max-w-5xl">
+          <p class="text-lg mb-4 font-gelasio text-ink-500">
+            My developer career began with an internship at a travel startup,
+            where I primarily did front end work, but was also exposed to some
+            Python and Django. Following that, I had two back-end focused
+            contract positions using Ruby and Rails, working on a real estate
+            application and a stock exchange app respectively. My first
+            permanent developer position was within a small division of a
+            private mid-sized recruitment firm, where I worked with the lead
+            developer and eventually wore many hats, eventually assuming primary
+            responsibility for this firm’s small and medium business self-serve
+            recruitment software. After two and a half years there, I moved on
+            with a desire to assume more responsibility and learn newer
+            technologies, working in more senior full-stack positions on an
+            email and LinkedIn sales campaign application, and most recently on
+            software for brokers working in commercial real estate transactions.
+          </p>
+        </span>
+        <span class="ml-10 mr-10 max-w-5xl">
+          <p class="text-lg mb-4 font-gelasio text-ink-500">
+            I’ve worked in both feature creation and maintenance, and have seen
+            setups ranging from the newest and hottest to 10+ year old beasts
+            running dead libraries and frameworks, such as
+            <a
+              href="https://github.com/hobo/hobo"
+              class="text-ink-400 hover:text-ink-300"
+              >“Hobo”</a
+            >. I’m a generalist who favours making code as consistent and
+            comprehensible as possible.
+          </p>
+        </span>
+      </div>
     </div>
   </body>
 </html>
