@@ -1,8 +1,8 @@
 <!-- ########################################## -->
 <!-- INSTRUCTIONS -->
 
-<!-- Compile CSS when tailwind configuration is altered, classes are extracted into @apply, or you are ready for production (remember to first set purge to true in tailwind.config.js):
-  $ npx tailwindcss-cli@latest build -i ./stylesheets/main.css -o ./dist/tailwind.css
+<!-- Compile CSS when tailwind configuration is altered, classes are extracted into @apply, or you are ready for production:
+  $ npx tailwindcss@3.3.3 -i ./stylesheets/main.css -o ./dist/tailwind.css
 -->
 
 <!-- Hot reload:
@@ -26,7 +26,7 @@
 -->
 <!-- ########################################## -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -54,7 +54,7 @@
     >
       Projects
     </h1>
-    <p class="flex justify-center mb-10 font-gelasio">
+    <p class="flex justify-center mb-10 font-gelasio text-ink-500">
       Click on a project's image for more details.
     </p>
 
@@ -63,59 +63,146 @@
       <div
         class="grid grid-cols-2 gap-x-24 justify-items-center mx-16 max-w-7xl"
       >
-        <div class="flex flex-col mb-12 text-ember-500">
+        <div class="flex flex-col mb-16 text-ember-500 min-h-one-fifth">
           <h2 class="flex justify-center text-3xl mb-4 font-secularOne">
             Better File Review Status
           </h2>
           <img
-            src="images/screenshots/better-file-review-status/Data Analyst Portal Ready for Dismissal.png"
+            class="max-h-fit"
+            src="images/screenshots/better-file-review-status/Expanded Email Inbox File Review Statuses.png"
             alt="Better File Review Status Image Carousel"
           />
         </div>
-        <div class="flex flex-col mb-12 text-ember-500">
+        <div class="flex flex-col mb-16 text-ink-500 my-10">
+          <p class="">
+            Problem: Solution: Led a team of three developers to construct an
+            uploaded file processing status view in the Origin application's
+            email inbox for real estate deal teams, linked up to matching
+            back-office file processing capabilities enhanced by the same team.
+          </p>
+        </div>
+        <div class="flex flex-col mb-16 text-ember-500 min-h-one-fifth">
           <h2 class="flex justify-center text-3xl mb-4 font-secularOne">
             Sentiment Analysis
           </h2>
           <img
+            class="max-h-fit"
             src="images/screenshots/sentiment-analysis/Sentiment Analysis.png"
             alt="Sentiment Analysis Image Carousel"
           />
         </div>
-        <div class="flex flex-col mb-12 text-ember-500">
+        <div class="flex flex-col mb-16 text-ink-500 my-10">
+          <p class="">
+            Problem: Solution: Two separate solutions for automated sentiment
+            analysis of customer text responses: (a) using a pre-existing API;
+            (b) a custom program trained from human rated responses.
+          </p>
+        </div>
+        <div class="flex flex-col mb-16 text-ember-500 min-h-one-fifth">
           <h2 class="flex justify-center text-3xl mb-4 font-secularOne">
             Custom Logging Interface
           </h2>
           <img
+            class="max-h-fit"
             src="images/logos/ruby-on-rails-logo.svg"
             alt="Custom Logging Interface Image Carousel"
           />
         </div>
-        <div class="flex flex-col mb-12 text-ember-500">
+        <div class="flex flex-col mb-16 text-ink-500 my-10">
+          <p class="line-clamp-3">
+            Led a team of three developers to construct an uploaded file
+            processing status view in the application's email inbox for real
+            estate deal teams, linking up to matching back-office file
+            processing capabilities enhanced by the same team. Blah, blah. Blah,
+            blah. Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah. Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah. *** Test should not be shown! ***
+          </p>
+        </div>
+        <div class="flex flex-col mb-16 text-ember-500 min-h-one-fifth">
           <h2 class="flex justify-center text-3xl mb-4 font-secularOne">
             Job Ad Builder
           </h2>
           <img
+            class="max-h-fit"
             src="images/logos/ruby-on-rails-logo.svg"
             alt="Job Ad Builder Image Carousel"
           />
         </div>
-        <div class="flex flex-col mb-12 text-ember-500">
+        <div class="flex flex-col mb-16 text-ink-500 my-10">
+          <p class="line-clamp-3">
+            Led a team of three developers to construct an uploaded file
+            processing status view in the application's email inbox for real
+            estate deal teams, linking up to matching back-office file
+            processing capabilities enhanced by the same team. Blah, blah. Blah,
+            blah. Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah. Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah. *** Test should not be shown! ***
+          </p>
+        </div>
+        <div class="flex flex-col mb-16 text-ember-500 min-h-one-fifth">
           <h2 class="flex justify-center text-3xl mb-4 font-secularOne">
             Facebook Jobs API
           </h2>
           <img
+            class="max-h-fit"
             src="images/logos/ruby-on-rails-logo.svg"
             alt="Facebook Jobs API Image Carousel"
           />
         </div>
-        <div class="flex flex-col mb-12 text-ember-500">
+        <div class="flex flex-col mb-16 text-ink-500 my-10">
+          <p class="line-clamp-3">
+            Led a team of three developers to construct an uploaded file
+            processing status view in the application's email inbox for real
+            estate deal teams, linking up to matching back-office file
+            processing capabilities enhanced by the same team. Blah, blah. Blah,
+            blah. Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah. Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah. *** Test should not be shown! ***
+          </p>
+        </div>
+        <div
+          class="flex flex-col mb-16 text-ember-500 min-h-one-fifth max-h-one-fifth"
+        >
           <h2 class="flex justify-center text-3xl mb-4 font-secularOne">
-            Job Applications: Psychometric Tests
+            Job Apps: Psychometric Tests
           </h2>
           <img
+            class="max-h-fit"
             src="images/logos/ruby-on-rails-logo.svg"
-            alt="Job Applications Psychometric Tests Image Carousel"
+            alt="Job Apps Psychometric Tests Image Carousel"
           />
+        </div>
+        <div class="flex flex-col mb-16 text-ink-500 my-10">
+          <p class="line-clamp-3">
+            Led a team of three developers to construct an uploaded file
+            processing status view in the application's email inbox for real
+            estate deal teams, linking up to matching back-office file
+            processing capabilities enhanced by the same team. Blah, blah. Blah,
+            blah. Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah. Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah, blah.Blah,
+            blah.Blah, blah. *** Test should not be shown! ***
+          </p>
         </div>
       </div>
     </div>

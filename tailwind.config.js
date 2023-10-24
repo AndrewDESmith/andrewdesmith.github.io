@@ -1,12 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: {
-    enabled: false, // Toggle to true when deploying to production.
-    content: ["*.html"]
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: ["*.html"],
   theme: {
     extend: {
+      minHeight: {
+        oneFifth: "20vh",
+        oneQuarter: "25vh",
+        "one-third": "33.333333vh",
+        "one-half": "50vh"
+      },
       colors: {
         // From canva.com/learn/website-color-schemes
         // Website color scheme #41
@@ -280,9 +282,6 @@ module.exports = {
       //   "hero-pattern": "../images/backgrounds/morphing-diamonds.svg"
       // }
     }
-  },
-  variants: {
-    extend: {}
   },
   plugins: []
 }
