@@ -4,7 +4,7 @@
   "description": "2023 Portfolio Site",
   "main": "tailwind.config.js",
   "scripts": {
-    "tailwind": "npx tailwindcss build main.css -o tailwind.css",
+    "tailwind": "npx tailwindcss@3.3.3 -i ./stylesheets/main.css -o ./dist/tailwind.css",
     "autoprefixer": "postcss tailwind.css -u autoprefixer --no-map -o tailwind.css",
     "minify": "postcss tailwind.css -u cssnano --no-map -o tailwind.min.css",
     "build": "npm run tailwind && npm run autoprefixer",
