@@ -2,9 +2,13 @@
   "name": "portfolio-website",
   "version": "1.0.0",
   "description": "2023 Portfolio Site",
-  "main": "prettier.config.js",
+  "main": "tailwind.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tailwind": "npx tailwindcss build main.css -o tailwind.css",
+    "autoprefixer": "postcss tailwind.css -u autoprefixer --no-map -o tailwind.css",
+    "minify": "postcss tailwind.css -u cssnano --no-map -o tailwind.min.css",
+    "build": "npm run tailwind && npm run autoprefixer",
+    "production": "npm run tailwind && npm run autoprefixer && npm run minify"
   },
   "repository": {
     "type": "git",
@@ -18,11 +22,5 @@
   "bugs": {
     "url": "https://github.com/AndrewDESmith/portfolio-2023/issues"
   },
-  "homepage": "https://github.com/AndrewDESmith/portfolio-2023#readme",
-  "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.31",
-    "prettier-plugin-tailwindcss": "^0.5.6",
-    "tailwindcss": "^3.3.3"
-  }
+  "homepage": "https://github.com/AndrewDESmith/portfolio-2023#readme"
 }
