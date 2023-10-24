@@ -5,10 +5,5 @@
   "singleQuote": false,
   "printWidth": 80,
   "tabWidth": 2,
-  "twClassesPosition": "components-first",
-  "twConfig": "Desktop/Web Development/portfolio-2023/portfolio-website/tailwind.config.js",
-  "twJsxClassAttributes": "class,className,tw",
-  "twPluginsOrder": "string",
-  "twSortFunctions": "clsx,classNames,cx",
-  "twUnknownClassesPosition": "start"
+  "plugins": ["prettier-plugin-tailwindcss"]
 }
