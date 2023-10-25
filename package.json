@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/AndrewDESmith/portfolio-2023/issues"
   },
-  "homepage": "https://github.com/AndrewDESmith/portfolio-2023#readme"
+  "homepage": "https://github.com/AndrewDESmith/portfolio-2023#readme",
+  "dependencies": {
+    "tailwindcss": "^3.3.3",
+    "tailwindcss-animation-delay": "^1.0.7"
+  }
 }

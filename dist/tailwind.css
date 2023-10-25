@@ -612,13 +612,6 @@ video {
   margin-top: 2rem;
 }
 
-.line-clamp-3 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-}
-
 .flex {
   display: flex;
 }
@@ -638,6 +631,78 @@ video {
 
 .max-w-7xl {
   max-width: 80rem;
+}
+
+@keyframes fadeInBody {
+  0% {
+    color: transparent;
+    opacity: 0;
+  }
+
+  100% {
+    color: #0B2F4E;
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-body {
+  animation: fadeInBody 2s ease forwards;
+}
+
+@keyframes fadeInFromLeft {
+  0% {
+    color: transparent;
+    opacity: 0;
+    position: relative;
+    left: -100px;
+  }
+
+  100% {
+    color: #B82601;
+    opacity: 1;
+    position: relative;
+    left: 0;
+  }
+}
+
+.animate-fade-in-from-left {
+  animation: fadeInFromLeft 2s ease forwards;
+}
+
+@keyframes fadeInFromRight {
+  0% {
+    color: transparent;
+    opacity: 0;
+    position: relative;
+    right: -100px;
+  }
+
+  100% {
+    color: #0B2F4E;
+    opacity: 1;
+    position: relative;
+    right: 0;
+  }
+}
+
+.animate-fade-in-from-right {
+  animation: fadeInFromRight 2s ease forwards;
+}
+
+@keyframes fadeInTitle {
+  0% {
+    color: transparent;
+    opacity: 0;
+  }
+
+  100% {
+    color: #B82601;
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-title {
+  animation: fadeInTitle 2s ease forwards;
 }
 
 .grid-cols-1 {
@@ -746,6 +811,41 @@ video {
 .text-ink-500 {
   --tw-text-opacity: 1;
   color: rgb(11 47 78 / var(--tw-text-opacity));
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-gray-500 {
+  --tw-shadow-color: #A8ACB7;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+.animation-delay-700 {
+  animation-delay: 700ms;
+}
+
+.animation-delay-900 {
+  animation-delay: 900ms;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+.animation-delay-1200 {
+  animation-delay: 1200ms;
 }
 
 @font-face {
