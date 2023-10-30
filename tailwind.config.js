@@ -7,7 +7,11 @@ module.exports = {
     extend: {
       animation: {
         "fade-in-title": "fadeInTitle 2s ease forwards",
+        "fade-in-title-from-right": "fadeInTitleFromRight 2s ease forwards",
         "fade-in-body": "fadeInBody 2s ease forwards",
+        "fade-in-body-from-left": "fadeInBodyFromLeft 2s ease forwards",
+        "fade-in-body-from-right": "fadeInBodyFromRight 2s ease forwards",
+        "fade-in-navbar-from-right": "fadeInBodyFromRight 1s ease forwards",
         "fade-in-from-left": "fadeInFromLeft 2s ease forwards",
         "fade-in-from-right": "fadeInFromRight 2s ease forwards"
       },
@@ -22,6 +26,20 @@ module.exports = {
             opacity: 1
           }
         },
+        fadeInTitleFromRight: {
+          "0%": {
+            color: theme("colors.transparent"),
+            opacity: 0,
+            position: "relative",
+            right: "-100px"
+          },
+          "100%": {
+            color: theme("colors.ember.500"),
+            opacity: 1,
+            position: "relative",
+            right: 0
+          }
+        },
         fadeInBody: {
           "0%": {
             color: theme("colors.transparent"),
@@ -30,6 +48,34 @@ module.exports = {
           "100%": {
             color: theme("colors.ink.500"),
             opacity: 1
+          }
+        },
+        fadeInBodyFromLeft: {
+          "0%": {
+            color: theme("colors.transparent"),
+            opacity: 0,
+            position: "relative",
+            left: "-100px"
+          },
+          "100%": {
+            color: theme("colors.ink.500"),
+            opacity: 1,
+            position: "relative",
+            left: 0
+          }
+        },
+        fadeInBodyFromRight: {
+          "0%": {
+            color: theme("colors.transparent"),
+            opacity: 0,
+            position: "relative",
+            right: "-100px"
+          },
+          "100%": {
+            color: theme("colors.ink.500"),
+            opacity: 1,
+            position: "relative",
+            right: 0
           }
         },
         fadeInFromLeft: {
@@ -261,3 +307,31 @@ module.exports = {
   },
   plugins: [require("tailwindcss-animation-delay")]
 }
+
+// Tailwind CSS Animation Delay Plugin:
+// animation-delay-none animation-delay: 0s;
+// animation-delay-75  animation-delay: 75ms;
+// animation-delay-100 animation-delay: 100ms;
+// animation-delay-150 animation-delay: 150ms;
+// animation-delay-200 animation-delay: 200ms;
+// animation-delay-300 animation-delay: 300ms;
+// animation-delay-400 animation-delay: 400ms;
+// animation-delay-500 animation-delay: 500ms;
+// animation-delay-600 animation-delay: 600ms;
+// animation-delay-700 animation-delay: 700ms;
+// animation-delay-800 animation-delay: 800ms;
+// animation-delay-900 animation-delay: 900ms;
+// animation-delay-1000  animation-delay: 1000ms;
+// animation-delay-1100  animation-delay: 1100ms;
+// animation-delay-1200  animation-delay: 1200ms;
+// animation-delay-1300  animation-delay: 1300ms;
+// animation-delay-1400  animation-delay: 1400ms;
+// animation-delay-1500  animation-delay: 1500ms;
+// animation-delay-2000  animation-delay: 2000ms;
+// animation-delay-3000  animation-delay: 3000ms;
+// animation-delay-4000  animation-delay: 4000ms;
+// animation-delay-5000  animation-delay: 5000ms;
+// animation-delay-6000  animation-delay: 6000ms;
+// animation-delay-7000  animation-delay: 7000ms;
+// animation-delay-8000  animation-delay: 8000ms;
+// animation-delay-9000  animation-delay: 9000ms;
