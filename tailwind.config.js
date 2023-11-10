@@ -5,6 +5,9 @@ module.exports = {
   content: ["*.html"],
   theme: {
     extend: {
+      screens: {
+        "-sm": { max: "639px" }
+      },
       animation: {
         "fade-in-title": "fadeInTitle 2s ease forwards",
         "fade-in-title-from-right": "fadeInTitleFromRight 2s ease forwards",
