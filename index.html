@@ -13,7 +13,7 @@
   $ live-server
 -->
 
-<!-- Autoformat Tailwind CSS classes (sort them here):
+<!-- Autoformat Tailwind CSS classes, if you don't want to use a text editor plugin (sort them here):
   One time local setup:
   $ npm install --save-dev --save-exact prettier
   $ npm install prettier-plugin-tailwind
@@ -300,7 +300,7 @@
       ></div>
       <div
         id="modal-box"
-        class="sm:top-2/10 fixed left-0 top-1/20 flex hidden min-h-[90vh] min-w-[95vw] flex-col items-center gap-2 rounded-lg bg-[#FFFFEB] p-4 sm:left-1/40 sm:w-[385px] sm:min-w-[95vw]"
+        class="fixed left-0 top-0 flex hidden min-h-[100vh] min-w-[100vw] flex-col items-center gap-2 rounded-lg bg-[#FFFFEB] p-4 sm:left-1/15 sm:top-1/15 sm:min-h-[85vh] sm:min-w-[85vw]"
       >
         <img
           src="images/favicons/close-x.svg"
@@ -308,24 +308,8 @@
           id="modal-close"
           class="relative left-197/400 h-6 w-6 opacity-40 hover:opacity-80 sm:h-9 sm:w-9"
         />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="mx-auto h-11 w-11 rounded-full bg-[#D1FAE5] text-[#059669]"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1"
-            d="M5 13l4 4L19 7"
-          />
-        </svg>
-        <span class="text-2xl font-medium">Payment Successful</span>
-        <p class="text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-          consequatur?
+        <p class="fixed bottom-1/10 text-center">
+          Caption text for each image should go here.
         </p>
       </div>
     </div>
