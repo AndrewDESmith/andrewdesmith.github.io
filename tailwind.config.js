@@ -1,4 +1,4 @@
-const plugin = require("tailwindcss/plugin")
+const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -7,6 +7,13 @@ module.exports = {
     extend: {
       screens: {
         "-sm": { max: "639px" }
+      },
+      inset: {
+        "1/40": "2.5%",
+        "1/20": "5%",
+        "1/10": "10%",
+        "197/400": "49.25%",
+        "98/200": "49.5%"
       },
       animation: {
         "fade-in-title": "fadeInTitle 2s ease forwards",
@@ -309,7 +316,7 @@ module.exports = {
     }
   },
   plugins: [require("tailwindcss-animation-delay")]
-}
+};
 
 // Tailwind CSS Animation Delay Plugin:
 // animation-delay-none animation-delay: 0s;

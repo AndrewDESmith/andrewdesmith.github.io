@@ -38,6 +38,7 @@
       type="image/svg"
       href="images/favicons/neon-window-frames-square-crop.svg"
     />
+    <script type="text/javascript" src="js/modal.js" defer></script>
   </head>
   <body class="hero-pattern bg-lightGray-50">
     <nav
@@ -49,6 +50,16 @@
       >
       <span class="font-play text-ink-400 sm:text-xl">
         <a href="/about.html" class="hover:text-ink-300">About Me & Contact</a>
+      </span>
+      <span class="font-play text-ink-400 sm:text-xl">
+        <a href="/tailwind-card-carousel.html" class="hover:text-ink-300"
+          >Carousel</a
+        >
+      </span>
+      <span class="font-play text-ink-400 sm:text-xl">
+        <a href="/tailwind-modal-component-2.html" class="hover:text-ink-300"
+          >Modal</a
+        >
       </span>
     </nav>
     <h1
@@ -76,7 +87,7 @@
             Better File Review Status
           </h2>
           <img
-            class="max-h-fit shadow-xl shadow-gray-500"
+            class="image-switch max-h-fit shadow-xl shadow-gray-500"
             src="images/screenshots/better-file-review-status/Expanded Email Inbox File Review Statuses.png"
             alt="Better File Review Status Image Carousel"
           />
@@ -114,7 +125,7 @@
             Sentiment Analysis
           </h2>
           <img
-            class="max-h-fit shadow-xl shadow-gray-500"
+            class="image-switch max-h-fit shadow-xl shadow-gray-500"
             src="images/screenshots/sentiment-analysis/Sentiment Analysis Censored.png"
             alt="Sentiment Analysis Image Carousel"
           />
@@ -153,7 +164,7 @@
             Custom Logging Interface
           </h2>
           <img
-            class="max-h-fit shadow-xl shadow-gray-500"
+            class="image-switch max-h-fit shadow-xl shadow-gray-500"
             src="images/screenshots/interactor-interface/Interactor Interface Code.png"
             alt="Custom Logging Interface Image Carousel"
           />
@@ -190,7 +201,7 @@
             Job Ad Builder
           </h2>
           <img
-            class="max-h-fit shadow-xl shadow-gray-500"
+            class="image-switch max-h-fit shadow-xl shadow-gray-500"
             src="images/screenshots/job-ad-builder/Job Ad Builder Search Snippets.png"
             alt="Job Ad Builder Image Carousel"
           />
@@ -224,7 +235,7 @@
             Facebook Jobs API
           </h2>
           <img
-            class="max-h-fit shadow-xl shadow-gray-500"
+            class="image-switch max-h-fit shadow-xl shadow-gray-500"
             src="images/screenshots/facebook-jobs-api/Facebook Job Posting Censored.png"
             alt="Facebook Jobs API Image Carousel"
           />
@@ -256,7 +267,7 @@
             Job Apps: Psychometric Tests
           </h2>
           <img
-            class="max-h-fit shadow-xl shadow-gray-500"
+            class="image-switch max-h-fit shadow-xl shadow-gray-500"
             src="images/screenshots/job-apps-psychometric-tests/Psychometric and Environmental Fit Scales.png"
             alt="Job Apps Psychometric Tests Image Carousel"
           />
@@ -279,6 +290,43 @@
             enhancement to the platform’s job application workflow.
           </p>
         </div>
+      </div>
+    </div>
+    <!-- Modal  -->
+    <div class="h-full w-full">
+      <div
+        id="modal-bg"
+        class="fixed top-0 hidden h-full min-h-[100vh] w-full min-w-[100vw]"
+      ></div>
+      <div
+        id="modal-box"
+        class="sm:top-2/10 fixed left-0 top-1/20 flex hidden min-h-[90vh] min-w-[95vw] flex-col items-center gap-2 rounded-lg bg-[#FFFFEB] p-4 sm:left-1/40 sm:w-[385px] sm:min-w-[95vw]"
+      >
+        <img
+          src="images/favicons/close-x.svg"
+          alt="Close icon"
+          id="modal-close"
+          class="relative left-197/400 h-6 w-6 opacity-40 hover:opacity-80 sm:h-9 sm:w-9"
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="mx-auto h-11 w-11 rounded-full bg-[#D1FAE5] text-[#059669]"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1"
+            d="M5 13l4 4L19 7"
+          />
+        </svg>
+        <span class="text-2xl font-medium">Payment Successful</span>
+        <p class="text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+          consequatur?
+        </p>
       </div>
     </div>
   </body>
