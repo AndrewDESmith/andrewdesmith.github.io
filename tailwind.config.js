@@ -17,6 +17,9 @@ module.exports = {
         "197/400": "49.25%",
         "98/200": "49.5%"
       },
+      opacity: {
+        98: "0.98"
+      },
       animation: {
         "fade-in-title": "fadeInTitle 2s ease forwards",
         "fade-in-title-from-right": "fadeInTitleFromRight 2s ease forwards",

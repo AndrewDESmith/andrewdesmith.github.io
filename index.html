@@ -50,15 +50,11 @@
       >
       <span class="font-play text-ink-400 sm:text-xl">
         <a href="/about.html" class="hover:text-ink-300">About Me & Contact</a>
+        |
       </span>
       <span class="font-play text-ink-400 sm:text-xl">
         <a href="/tailwind-card-carousel.html" class="hover:text-ink-300"
           >Carousel</a
-        >
-      </span>
-      <span class="font-play text-ink-400 sm:text-xl">
-        <a href="/tailwind-modal-component-2.html" class="hover:text-ink-300"
-          >Modal</a
         >
       </span>
     </nav>
@@ -95,7 +91,7 @@
         <div
           class="my-10 flex animate-fade-in-from-right flex-col text-ink-500 opacity-0 animation-delay-600 sm:mb-16"
         >
-          <p>
+          <p class="font-gelasio">
             <span class="font-gelasioBold">Problem:&nbsp;</span> Client team
             members in commercial real estate firms need to share and organize
             files within a web application that helps them schedule and
@@ -133,7 +129,7 @@
         <div
           class="my-10 flex animate-fade-in-from-right flex-col text-ink-500 opacity-0 animation-delay-700 sm:mb-16"
         >
-          <p>
+          <p class="font-gelasio">
             <span class="font-gelasioBold">Problem:&nbsp;</span> A web
             application focused on assisting salespeople clients in running
             email-based and LinkedIn message-based sales campaigns. Clients
@@ -172,7 +168,7 @@
         <div
           class="my-10 flex animate-fade-in-from-right flex-col text-ink-500 opacity-0 animation-delay-1000 sm:mb-16"
         >
-          <p>
+          <p class="font-gelasio">
             <span class="font-gelasioBold">Problem:&nbsp;</span> The same
             software as the "Sentiment Analysis" project made use of huge
             interactor objects, that is, one or more sequential actions modeled
@@ -209,7 +205,7 @@
         <div
           class="my-10 flex animate-fade-in-from-right animate-fade-in-from-right flex-col text-ink-500 opacity-0 animation-delay-1200 sm:mb-16"
         >
-          <p>
+          <p class="font-gelasio">
             <span class="font-gelasioBold">Problem:&nbsp;</span> Hiring software
             for small and medium businesses was being used internally by
             employees at a recruiting company for creating and editing job
@@ -243,7 +239,7 @@
         <div
           class="my-10 flex animate-fade-in-from-right flex-col text-ink-500 opacity-0 animation-delay-1300 sm:mb-16"
         >
-          <p>
+          <p class="font-gelasio">
             <span class="font-gelasioBold">Problem:&nbsp;</span> The same hiring
             software used by the "Job Ad Builder" project integrated with
             numerous application feeds of different hiring sites such as Indeed,
@@ -275,7 +271,7 @@
         <div
           class="my-10 flex animate-fade-in-from-right flex-col text-ink-500 opacity-0 animation-delay-2000 sm:mb-16"
         >
-          <p>
+          <p class="font-gelasio">
             <span class="font-gelasioBold">Problem:&nbsp;</span> Small and
             medium business hiring software featured the ability for users to
             create and edit their own job postings, prior to having the software
@@ -300,7 +296,7 @@
       ></div>
       <div
         id="modal-box"
-        class="fixed left-0 top-0 flex hidden min-h-[100vh] min-w-[100vw] flex-col items-center gap-2 rounded-lg bg-[#FFFFEB] p-4 sm:left-1/15 sm:top-1/15 sm:min-h-[85vh] sm:min-w-[85vw]"
+        class="fixed left-0 top-0 flex hidden max-h-[100vh] min-h-[100vh] min-w-[100vw] max-w-[100vw] flex-col items-center gap-2 rounded-lg bg-lightGray-900 p-4 opacity-98 sm:left-1/15 sm:top-1/15 sm:max-h-[85vh] sm:min-h-[85vh] sm:min-w-[85vw] sm:max-w-[85vw]"
       >
         <img
           src="images/favicons/close-x.svg"
@@ -308,7 +304,16 @@
           id="modal-close"
           class="relative left-197/400 h-6 w-6 opacity-40 hover:opacity-80 sm:h-9 sm:w-9"
         />
-        <p class="fixed bottom-1/10 text-center">
+        <img
+          src=""
+          alt="Project image"
+          id="current-modal-image"
+          class="max-h-[70vh]"
+        />
+        <p
+          id="caption-text"
+          class="fixed bottom-1/10 text-center font-gelasioSemiBold text-lightGray-100"
+        >
           Caption text for each image should go here.
         </p>
       </div>
