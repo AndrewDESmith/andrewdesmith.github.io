@@ -50,12 +50,6 @@
       >
       <span class="font-play text-ink-400 sm:text-xl">
         <a href="/about.html" class="hover:text-ink-300">About Me & Contact</a>
-        |
-      </span>
-      <span class="font-play text-ink-400 sm:text-xl">
-        <a href="/tailwind-card-carousel.html" class="hover:text-ink-300"
-          >Carousel</a
-        >
       </span>
     </nav>
     <h1
@@ -315,18 +309,12 @@
           id="caption-text"
           class="fixed bottom-1/10 text-center font-gelasioSemiBold text-lightGray-100"
         ></p>
-        <input
-          class="peer sr-only"
-          type="radio"
-          name="carousel"
-          id="carousel-1"
-          checked
-        />
+        <input class="peer sr-only" type="radio" name="carousel" checked />
         <!-- Carousel controls -->
         <div class="absolute top-1/2 z-20 flex w-full justify-between">
           <label
-            for="carousel-3"
-            id="carousel-3-label"
+            for="previous-image"
+            id="previous-image-label"
             class="inline-block -translate-x-5 cursor-pointer rounded-full bg-white text-red-600 shadow-md active:translate-y-0.5"
           >
             <svg
@@ -343,8 +331,8 @@
             </svg>
           </label>
           <label
-            for="carousel-2"
-            id="carousel-2-label"
+            for="next-image"
+            id="next-image-label"
             class="inline-block translate-x-5 cursor-pointer rounded-full bg-white text-red-600 shadow-md active:translate-y-0.5"
           >
             <svg

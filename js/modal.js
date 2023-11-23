@@ -2,8 +2,8 @@ const modalbg = document.getElementById("modal-bg");
 const imageSwitches = document.querySelectorAll(".image-switch");
 const modalBox = document.getElementById("modal-box");
 const modalClose = document.getElementById("modal-close");
-const carousel3Label = document.getElementById("carousel-3-label");
-const carousel2Label = document.getElementById("carousel-2-label");
+const previousImageLabel = document.getElementById("previous-image-label");
+const nextImageLabel = document.getElementById("next-image-label");
 let currentModalImage = document.getElementById("current-modal-image");
 let currentImageFileName;
 
@@ -129,7 +129,7 @@ function reverseCarousel() {
 }
 
 // Left arrow in carousel
-carousel3Label.addEventListener("click", function (event) {
+previousImageLabel.addEventListener("click", function (event) {
   reverseCarousel();
 });
 
@@ -140,7 +140,7 @@ document.addEventListener("keydown", function (event) {
 });
 
 // Right arrow in carousel
-carousel2Label.addEventListener("click", function () {
+nextImageLabel.addEventListener("click", function () {
   advanceCarousel();
 });
 
