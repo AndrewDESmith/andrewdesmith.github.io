@@ -296,7 +296,8 @@
       ></div>
       <div
         id="modal-box"
-        class="fixed left-0 top-0 flex hidden max-h-[100vh] min-h-[100vh] min-w-[100vw] max-w-[100vw] flex-col items-center gap-2 rounded-lg bg-lightGray-900 p-4 opacity-98 sm:left-1/15 sm:top-1/15 sm:max-h-[85vh] sm:min-h-[85vh] sm:min-w-[85vw] sm:max-w-[85vw]"
+        class="fixed left-0 top-0 z-0 flex hidden max-h-[100vh] min-h-[100vh] min-w-[100vw] max-w-[100vw] transform animate-fade-in-modal flex-col items-center gap-2 rounded-lg bg-lightGray-900 p-4 opacity-0 opacity-98 transition-all duration-300 peer-checked:z-10 peer-checked:opacity-100 sm:left-1/15 sm:top-1/15 sm:max-h-[85vh] sm:min-h-[85vh] sm:min-w-[85vw] sm:max-w-[85vw]"
+        style="scroll-snap-type: x mandatory"
       >
         <img
           src="images/favicons/close-x.svg"
@@ -313,9 +314,53 @@
         <p
           id="caption-text"
           class="fixed bottom-1/10 text-center font-gelasioSemiBold text-lightGray-100"
-        >
-          Caption text for each image should go here.
-        </p>
+        ></p>
+        <input
+          class="peer sr-only"
+          type="radio"
+          name="carousel"
+          id="carousel-1"
+          checked
+        />
+        <!-- Carousel controls -->
+        <div class="absolute top-1/2 z-20 flex w-full justify-between">
+          <label
+            for="carousel-3"
+            id="carousel-3-label"
+            class="inline-block -translate-x-5 cursor-pointer rounded-full bg-white text-red-600 shadow-md active:translate-y-0.5"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-10 w-10"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </label>
+          <label
+            for="carousel-2"
+            id="carousel-2-label"
+            class="inline-block translate-x-5 cursor-pointer rounded-full bg-white text-red-600 shadow-md active:translate-y-0.5"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-10 w-10"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </label>
+        </div>
       </div>
     </div>
   </body>

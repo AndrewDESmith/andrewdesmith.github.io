@@ -28,7 +28,9 @@ module.exports = {
         "fade-in-body-from-right": "fadeInBodyFromRight 2s ease forwards",
         "fade-in-navbar-from-right": "fadeInBodyFromRight 1s ease forwards",
         "fade-in-from-left": "fadeInFromLeft 2s ease forwards",
-        "fade-in-from-right": "fadeInFromRight 2s ease forwards"
+        "fade-in-from-right": "fadeInFromRight 2s ease forwards",
+        "fade-in-modal": "fadeInModal 0.75s ease forwards",
+        "fade-out-modal": "fadeOutModal 0.75s ease-out forwards"
       },
       keyframes: (theme) => ({
         fadeInTitle: {
@@ -91,6 +93,22 @@ module.exports = {
             opacity: 1,
             position: "relative",
             right: 0
+          }
+        },
+        fadeInModal: {
+          "0%": {
+            opacity: 0
+          },
+          "100%": {
+            opacity: 1
+          }
+        },
+        fadeOutModal: {
+          "0%": {
+            opacity: 1
+          },
+          "100%": {
+            opacity: 0
           }
         },
         fadeInFromLeft: {
