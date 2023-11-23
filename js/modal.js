@@ -25,6 +25,12 @@ function previousImageFileFrom(imageFileName) {
     case "better-file-review-status/Expanded Email Inbox File Review Statuses.png":
       return "better-file-review-status/Data Analyst Portal Ready for Dismissal.png";
       break;
+    case "interactor-interface/Interactor Interface Code.png":
+      return "interactor-interface/Interactor Interface Code.png";
+      break;
+    case "sentiment-analysis/Sentiment Analysis Censored.png":
+      return "sentiment-analysis/Sentiment Analysis Censored.png";
+      break;
     case "job-ad-builder/Job Ad Builder Search Snippets.png":
       return "job-ad-builder/Job Ad Builder Search Snippets.png";
       break;
@@ -33,6 +39,15 @@ function previousImageFileFrom(imageFileName) {
       break;
     case "facebook-jobs-api/Facebook Jobs Application Modal.png":
       return "facebook-jobs-api/Facebook Job Posting Censored.png";
+      break;
+    case "job-apps-psychometric-tests/Purpose and Meaning Psych Questions.png":
+      return "job-apps-psychometric-tests/Purpose and Meaning Psychometric Report.png";
+      break;
+    case "job-apps-psychometric-tests/Psychometric and Environmental Fit Scales.png":
+      return "job-apps-psychometric-tests/Purpose and Meaning Psych Questions.png";
+      break;
+    case "job-apps-psychometric-tests/Purpose and Meaning Psychometric Report.png":
+      return "job-apps-psychometric-tests/Psychometric and Environmental Fit Scales.png";
       break;
     default:
       console.log(
@@ -49,6 +64,12 @@ function nextImageFileFrom(imageFileName) {
     case "better-file-review-status/Expanded Email Inbox File Review Statuses.png":
       return "better-file-review-status/Data Analyst Portal Ready for Dismissal.png";
       break;
+    case "interactor-interface/Interactor Interface Code.png":
+      return "interactor-interface/Interactor Interface Code.png";
+      break;
+    case "sentiment-analysis/Sentiment Analysis Censored.png":
+      return "sentiment-analysis/Sentiment Analysis Censored.png";
+      break;
     case "job-ad-builder/Job Ad Builder Search Snippets.png":
       return "job-ad-builder/Job Ad Builder Search Snippets.png";
       break;
@@ -57,6 +78,15 @@ function nextImageFileFrom(imageFileName) {
       break;
     case "facebook-jobs-api/Facebook Jobs Application Modal.png":
       return "facebook-jobs-api/Facebook Job Posting Censored.png";
+      break;
+    case "job-apps-psychometric-tests/Purpose and Meaning Psych Questions.png":
+      return "job-apps-psychometric-tests/Psychometric and Environmental Fit Scales.png";
+      break;
+    case "job-apps-psychometric-tests/Psychometric and Environmental Fit Scales.png":
+      return "job-apps-psychometric-tests/Purpose and Meaning Psychometric Report.png";
+      break;
+    case "job-apps-psychometric-tests/Purpose and Meaning Psychometric Report.png":
+      return "job-apps-psychometric-tests/Purpose and Meaning Psych Questions.png";
       break;
     default:
       console.log(
@@ -84,7 +114,6 @@ function fadeIn(element, duration = 750) {
 
 function advanceCarousel() {
   let nextImageFileName = nextImageFileFrom(currentImageFileName);
-  console.log("nextImageFileName", nextImageFileName);
   currentModalImage.src = `images/screenshots/${nextImageFileName}`;
   fadeIn(currentModalImage);
   setCaptionTextFrom(nextImageFileName);
@@ -93,7 +122,6 @@ function advanceCarousel() {
 
 function reverseCarousel() {
   let previousImageFileName = previousImageFileFrom(currentImageFileName);
-  console.log("previousImageFileName", previousImageFileName);
   currentModalImage.src = `images/screenshots/${previousImageFileName}`;
   fadeIn(currentModalImage);
   setCaptionTextFrom(previousImageFileName);
@@ -178,9 +206,17 @@ function setCaptionTextFrom(imageFileName) {
     case "interactor-interface/Interactor Interface Code.png":
       captionText.textContent = "(1 of 1) Custom loggin interface...";
       break;
+    case "job-apps-psychometric-tests/Purpose and Meaning Psych Questions.png":
+      captionText.textContent =
+        "(1 of 3) Job applications psychometric revamp...";
+      break;
     case "job-apps-psychometric-tests/Psychometric and Environmental Fit Scales.png":
       captionText.textContent =
-        "1 of 3 Job applications psychometric revamp...";
+        "(2 of 3) Job applications psychometric revamp...";
+      break;
+    case "job-apps-psychometric-tests/Purpose and Meaning Psychometric Report.png":
+      captionText.textContent =
+        "(3 of 3) Job applications psychometric revamp...";
       break;
     default:
       console.log(
