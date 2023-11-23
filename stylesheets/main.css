@@ -43,6 +43,11 @@
   src: url("../fonts/play/Play-Bold.ttf");
 }
 
+.text-lightGray-50 {
+  --tw-text-opacity: 1;
+  color: rgb(252 252 253 / var(--tw-text-opacity));
+}
+
 @keyframes fadeOutModal {
   0% {
     opacity: 1;

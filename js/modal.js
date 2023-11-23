@@ -186,37 +186,44 @@ function setCaptionTextFrom(imageFileName) {
 
   switch (imageFileName) {
     case "job-ad-builder/Job Ad Builder Search Snippets.png":
-      captionText.textContent = "(1 of 1) Job Ad Builder shown...";
+      captionText.innerHTML =
+        "<span class='font-gelasioBold text-lightGray-50'>[1 of 1]</span> &nbsp; Job Ad Builder shown...";
       break;
     case "facebook-jobs-api/Facebook Job Posting Censored.png":
-      captionText.textContent = "(1 of 2) Facebook Jobs API example posting.";
+      captionText.innerHTML =
+        "<span class='font-gelasioBold text-lightGray-50'>[1 of 2]</span> &nbsp; Facebook Jobs API example posting.";
       break;
     case "facebook-jobs-api/Facebook Jobs Application Modal.png":
-      captionText.textContent = "(2 of 2) Facebook Jobs API modal...";
+      captionText.innerHTML =
+        "<span class='font-gelasioBold text-lightGray-50'>[2 of 2]</span> &nbsp; Facebook Jobs API modal...";
       break;
     case "better-file-review-status/Expanded Email Inbox File Review Statuses.png":
-      captionText.textContent = "(1 of 2) Better file review status...";
+      captionText.innerHTML =
+        "<span class='font-gelasioBold text-lightGray-50'>[1 of 2]</span> &nbsp; Better file review status...";
       break;
     case "better-file-review-status/Data Analyst Portal Ready for Dismissal.png":
-      captionText.textContent = "(2 of 2) Better file review status...";
+      captionText.innerHTML =
+        "<span class='font-gelasioBold text-lightGray-50'>[2 of 2]</span> &nbsp; &nbsp; Refined graphical interface for the back-office data team.  Highlighted is where a data team member could classify the type of user submitted file and any reasons for declining to process a file (dismissal).";
       break;
     case "sentiment-analysis/Sentiment Analysis Censored.png":
-      captionText.textContent = "(1 of 1) Sentiment analysis...";
+      captionText.innerHTML =
+        "<span class='font-gelasioBold text-lightGray-50'>[1 of 1]</span> &nbsp; Sentiment analysis...";
       break;
     case "interactor-interface/Interactor Interface Code.png":
-      captionText.textContent = "(1 of 1) Custom loggin interface...";
+      captionText.innerHTML =
+        "<span class='font-gelasioBold text-lightGray-50'>[1 of 1]</span> &nbsp; Custom loggin interface...";
       break;
     case "job-apps-psychometric-tests/Purpose and Meaning Psych Questions.png":
-      captionText.textContent =
-        "(1 of 3) Job applications psychometric revamp...";
+      captionText.innerHTML =
+        "<span class='font-gelasioBold text-lightGray-50'>[1 of 3]</span> &nbsp; Job applications psychometric revamp...";
       break;
     case "job-apps-psychometric-tests/Psychometric and Environmental Fit Scales.png":
-      captionText.textContent =
-        "(2 of 3) Job applications psychometric revamp...";
+      captionText.innerHTML =
+        "<span class='font-gelasioBold text-lightGray-50'>[2 of 3]</span> &nbsp; Job applications psychometric revamp...";
       break;
     case "job-apps-psychometric-tests/Purpose and Meaning Psychometric Report.png":
-      captionText.textContent =
-        "(3 of 3) Job applications psychometric revamp...";
+      captionText.innerHTML =
+        "<span class='font-gelasioBold text-lightGray-50'>[3 of 3]</span> &nbsp; Job applications psychometric revamp...";
       break;
     default:
       console.log(
