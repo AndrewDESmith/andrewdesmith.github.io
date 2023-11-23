@@ -48,6 +48,11 @@
   color: rgb(252 252 253 / var(--tw-text-opacity));
 }
 
+.text-ember-400 {
+  --tw-text-opacity: 1;
+  color: rgb(249 51 1 / var(--tw-text-opacity));
+}
+
 @keyframes fadeOutModal {
   0% {
     opacity: 1;

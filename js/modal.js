@@ -1,4 +1,4 @@
-const modalbg = document.getElementById("modal-bg");
+const modalBg = document.getElementById("modal-bg");
 const imageSwitches = document.querySelectorAll(".image-switch");
 const modalBox = document.getElementById("modal-box");
 const modalClose = document.getElementById("modal-close");
@@ -154,7 +154,7 @@ function openModalFrom(imageSwitch) {
   imageSwitch.addEventListener("click", function () {
     modalBox.classList.remove("hidden");
     modalBox.classList.remove("animate-fade-out-modal");
-    modalbg.classList.remove("hidden");
+    modalBg.classList.remove("hidden");
     currentModalImage.src = imageSwitch.src;
     currentImageFileName = imageFileNameFrom(imageSwitch);
     setCaptionTextFrom(currentImageFileName);
@@ -164,11 +164,11 @@ function openModalFrom(imageSwitch) {
 }
 
 function closeModal() {
-  modalbg.addEventListener("click", function () {
+  modalBg.addEventListener("click", function () {
     modalBox.classList.add("animate-fade-out-modal");
     setTimeout(() => {
       modalBox.classList.add("hidden");
-      modalbg.classList.add("hidden");
+      modalBg.classList.add("hidden");
     }, 750);
   });
 
@@ -176,7 +176,7 @@ function closeModal() {
     modalBox.classList.add("animate-fade-out-modal");
     setTimeout(() => {
       modalBox.classList.add("hidden");
-      modalbg.classList.add("hidden");
+      modalBg.classList.add("hidden");
     }, 750);
   });
 }
@@ -199,11 +199,11 @@ function setCaptionTextFrom(imageFileName) {
       break;
     case "better-file-review-status/Expanded Email Inbox File Review Statuses.png":
       captionText.innerHTML =
-        "<span class='font-gelasioBold text-lightGray-50'>[1 of 2]</span> &nbsp; Better file review status...";
+        "<span class='font-gelasioBold text-ember-400'>[1 of 2]</span> &nbsp; Uploaded file processing status view within a client's in-app e-mail inbox. Here, all files associated with a particular real estate deal are grouped by back-office processing status. Highlighted is a submitted file's dismissal reason.";
       break;
     case "better-file-review-status/Data Analyst Portal Ready for Dismissal.png":
       captionText.innerHTML =
-        "<span class='font-gelasioBold text-lightGray-50'>[2 of 2]</span> &nbsp; &nbsp; Refined graphical interface for the back-office data team.  Highlighted is where a data team member could classify the type of user submitted file and any reasons for declining to process a file (dismissal).";
+        "<span class='font-gelasioBold text-ember-400'>[2 of 2]</span> &nbsp; &nbsp; Refined graphical interface for the back-office data team.  Highlighted is where a data team member could classify the type of user submitted file and any reasons for declining to process a file (dismissal).";
       break;
     case "sentiment-analysis/Sentiment Analysis Censored.png":
       captionText.innerHTML =
