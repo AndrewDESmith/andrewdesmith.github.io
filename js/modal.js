@@ -133,7 +133,7 @@ previousImageLabel.addEventListener("click", function (event) {
   reverseCarousel();
 });
 
-document.addEventListener("keydown", function (event) {
+document.addEventListener("keyup", function (event) {
   if (event.code === "ArrowLeft" && !modalBox.classList.contains("hidden")) {
     reverseCarousel();
   }
@@ -144,9 +144,25 @@ nextImageLabel.addEventListener("click", function () {
   advanceCarousel();
 });
 
-document.addEventListener("keydown", function (event) {
+document.addEventListener("keyup", function (event) {
   if (event.code === "ArrowRight" && !modalBox.classList.contains("hidden")) {
     advanceCarousel();
+  }
+});
+
+// "X" closing icon in modal
+modalClose.addEventListener("click", function () {
+  closeModal();
+});
+
+// Clicking outside of the modal.
+modalBg.addEventListener("click", function () {
+  closeModal();
+});
+
+document.addEventListener("keyup", function () {
+  if (event.code === "Escape" && !modalBox.classList.contains("hidden")) {
+    closeModal();
   }
 });
 
@@ -159,26 +175,14 @@ function openModalFrom(imageSwitch) {
     currentImageFileName = imageFileNameFrom(imageSwitch);
     setCaptionTextFrom(currentImageFileName);
   });
-
-  closeModal();
 }
 
 function closeModal() {
-  modalBg.addEventListener("click", function () {
-    modalBox.classList.add("animate-fade-out-modal");
-    setTimeout(() => {
-      modalBox.classList.add("hidden");
-      modalBg.classList.add("hidden");
-    }, 750);
-  });
-
-  modalClose.addEventListener("click", function () {
-    modalBox.classList.add("animate-fade-out-modal");
-    setTimeout(() => {
-      modalBox.classList.add("hidden");
-      modalBg.classList.add("hidden");
-    }, 750);
-  });
+  modalBox.classList.add("animate-fade-out-modal");
+  setTimeout(() => {
+    modalBox.classList.add("hidden");
+    modalBg.classList.add("hidden");
+  }, 750);
 }
 
 function setCaptionTextFrom(imageFileName) {
