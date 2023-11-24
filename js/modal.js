@@ -6,6 +6,7 @@ const previousImageLabel = document.getElementById("previous-image-label");
 const nextImageLabel = document.getElementById("next-image-label");
 let currentModalImage = document.getElementById("current-modal-image");
 let currentImageFileName;
+const loader = document.querySelector(".loader-dual-ring");
 
 imageSwitches.forEach((imageSwitch) => {
   openModalFrom(imageSwitch);
@@ -100,6 +101,7 @@ function fadeIn(element, duration = 750) {
   element.style.display = "";
   element.style.opacity = 0;
   let last = +new Date();
+
   let tick = function () {
     element.style.opacity =
       +element.style.opacity + (new Date() - last) / duration;
@@ -109,44 +111,57 @@ function fadeIn(element, duration = 750) {
         setTimeout(tick, 16);
     }
   };
+
   tick();
 }
 
-function advanceCarousel() {
+function changeCarousel(direction) {
+  let previousImageFileName = previousImageFileFrom(currentImageFileName);
   let nextImageFileName = nextImageFileFrom(currentImageFileName);
-  currentModalImage.src = `images/screenshots/${nextImageFileName}`;
-  fadeIn(currentModalImage);
-  setCaptionTextFrom(nextImageFileName);
-  currentImageFileName = nextImageFileName;
+
+  if (direction === "forward") {
+    currentModalImage.src = `images/screenshots/${nextImageFileName}`;
+    setCaptionTextFrom(nextImageFileName);
+    currentImageFileName = nextImageFileName;
+  } else {
+    currentModalImage.src = `images/screenshots/${previousImageFileName}`;
+    setCaptionTextFrom(previousImageFileName);
+    currentImageFileName = previousImageFileName;
+  }
+
+  currentModalImage.style.display = "none";
+  currentModalImage.style.opacity = 0;
+  toggleLoader();
 }
 
-function reverseCarousel() {
-  let previousImageFileName = previousImageFileFrom(currentImageFileName);
-  currentModalImage.src = `images/screenshots/${previousImageFileName}`;
-  fadeIn(currentModalImage);
-  setCaptionTextFrom(previousImageFileName);
-  currentImageFileName = previousImageFileName;
+function toggleLoader() {
+  loader.style.display = "inline-block";
+
+  currentModalImage.addEventListener("load", function () {
+    loader.style.display = "none";
+    fadeIn(currentModalImage);
+  });
 }
 
 // Left arrow in carousel
 previousImageLabel.addEventListener("click", function (event) {
-  reverseCarousel();
+  changeCarousel("reverse");
 });
 
 document.addEventListener("keyup", function (event) {
   if (event.code === "ArrowLeft" && !modalBox.classList.contains("hidden")) {
-    reverseCarousel();
+    changeCarousel("reverse");
   }
 });
 
 // Right arrow in carousel
 nextImageLabel.addEventListener("click", function () {
-  advanceCarousel();
+  changeCarousel("forward");
 });
 
 document.addEventListener("keyup", function (event) {
   if (event.code === "ArrowRight" && !modalBox.classList.contains("hidden")) {
-    advanceCarousel();
+    changeCarousel("forward");
   }
 });
 
@@ -174,6 +189,9 @@ function openModalFrom(imageSwitch) {
     currentModalImage.src = imageSwitch.src;
     currentImageFileName = imageFileNameFrom(imageSwitch);
     setCaptionTextFrom(currentImageFileName);
+    currentModalImage.style.display = "none";
+    currentModalImage.style.opacity = 0;
+    toggleLoader();
   });
 }
 
