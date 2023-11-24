@@ -112,6 +112,24 @@
   max-height: 75vh;
 }
 
+/* Cell phone in landscape mode.  */
+@media (max-height: 500px) {
+  #caption-text {
+    font-size: 0.75rem !important;
+    line-height: 1rem !important;
+  }
+}
+
+/* Tablet in landscape mode.  */
+@media (max-height: 900px) {
+  #caption-text {
+    --tw-text-opacity: 1 !important;
+    color: rgb(184 38 1 / var(--tw-text-opacity)) !important;
+    font-size: 0.875rem !important; /* 14px */
+    line-height: 1.25rem !important; /* 20px */
+  }
+}
+
 @layer base {
   /*  h1 {
     @apply text-2xl;

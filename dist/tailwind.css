@@ -700,8 +700,8 @@ video {
   max-height: 100vh;
 }
 
-.max-h-\[65vh\] {
-  max-height: 65vh;
+.max-h-\[55vh\] {
+  max-height: 55vh;
 }
 
 .max-h-fit {
@@ -1299,12 +1299,27 @@ video {
   max-height: 75vh;
 }
 
-/*@media (min-width: 768px) {
-  .md:text-lightgray-50 {
-    --tw-text-opacity: 1;
-    color: rgb(252 252 253 / var(--tw-text-opacity));
+/* Cell phone in landscape mode.  */
+
+@media (max-height: 500px) {
+  #caption-text {
+    font-size: 0.75rem !important;
+    line-height: 1rem !important;
   }
-}*/
+}
+
+/* Tablet in landscape mode.  */
+
+@media (max-height: 900px) {
+  #caption-text {
+    --tw-text-opacity: 1 !important;
+    color: rgb(184 38 1 / var(--tw-text-opacity)) !important;
+    font-size: 0.875rem !important;
+    /* 14px */
+    line-height: 1.25rem !important;
+    /* 20px */
+  }
+}
 
 .hover\:cursor-pointer:hover {
   cursor: pointer;
