@@ -56,3 +56,13 @@ sass:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+#### INSTRUCTIONS
+# To serve drafts:
+# Create a _drafts folder.
+# $ jekyll serve --draft --verbose
+# Go to http://localhost:4000/2024/11/14/draft-1.html (Today's date)
+
+# Build the site:
+# $ jekyll build --verbose
+# Defaults to localhost:4000

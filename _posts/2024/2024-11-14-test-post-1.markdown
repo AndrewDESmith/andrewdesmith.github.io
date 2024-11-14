@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Test Post 1 Nov 14 2024"
+date:   2024-11-14 15:51:34 -0400
+categories: test update
+author: "Andrew"
+permalink: /:categories/:year/:month/:day/:title
+---
+Some test content.
