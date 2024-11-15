@@ -10,7 +10,8 @@ layout: embedded_blog_posts
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
     <title>
-      The Blog of Andrew D.E. Smith | Primarily topics in full-stack web development, especially in the Ruby ecosystem.
+      The Blog of Andrew D.E. Smith | Primarily topics in full-stack web
+      development, especially in the Ruby ecosystem.
     </title>
     <meta name="generator" content="Jekyll v4.3.4" />
     <meta property="og:title" content="The Blog of Andrew D.E. Smith" />
@@ -53,7 +54,11 @@ layout: embedded_blog_posts
       type="image/svg"
       href="images/favicons/neon-window-frames-square-crop.svg"
     />
-    <script type="text/javascript" src="/js/simple_jekyll_search.js" defer></script>
+    <script
+      type="text/javascript"
+      src="/js/simple_jekyll_search.js"
+      defer
+    ></script>
   </head>
   <body class="hero-pattern bg-lightGray-50">
     <header class="site-header" role="banner"></header>
@@ -135,7 +140,7 @@ layout: embedded_blog_posts
       </div>
     </div>
 
-    <div class="wrapper">
+    <!--     <div class="wrapper">
       <a class="site-title" rel="author" href="/">The Blog of Andrew D.E. Smith</a>
       <nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -149,57 +154,84 @@ layout: embedded_blog_posts
           </span>
         </label>
       </nav>
-    </div>
+    </div> -->
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <div class="home">
+      <div class="wrapper grid grid-cols-1 justify-items-center">
+        <div
+          class="homeml-10 mr-10 max-w-5xl animate-fade-in-body opacity-0 animation-delay-500 mr-0"
+        >
           <h2 class="post-list-heading">Posts</h2>
           <ul class="post-list">
-            {% for post in paginator.posts %}
-            <li>
-              <span class="post-meta"> {{ post.date }} </span>
-              <h3>
-                <a class="post-link" href="{{ post.url }}">
-                  {{ post.title }}
-                </a>
-                {{ post.excerpt }}
-              </h3>
-            </li>
-            {% endfor %}
+            <span
+              class=""
+            >
+              {% for post in paginator.posts %}
+              <li>
+                <span class="post-meta"> {{ post.date }} </span>
+                <h3>
+                  <span
+                    class="font-gelasioBold text-ink-400 hover:text-ink-300 sm:text-lg"
+                  >
+                    <a class="post-link" href="{{ post.url }}">
+                      {{ post.title }}
+                    </a>
+                  </span>
+                  <span class="mb-4 font-gelasio text-ink-500 sm:text-lg">
+                    {{ post.excerpt }}
+                  </span>
+                </h3>
+              </li>
+              {% endfor %}
+            </span>
           </ul>
 
           <!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">
-      Previous
-    </a>
-  {% else %}
-    <span class="previous">Previous</span>
-  {% endif %}
-  <span class="page_number ">
-    Page: {{ paginator.page }} of {{ paginator.total_pages }}
-  </span>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-  {% else %}
-    <span class="next ">Next</span>
-  {% endif %}
-</div>
+          <div class="pagination">
+            {% if paginator.previous_page %}
+            <a
+              href="{{ paginator.previous_page_path }}"
+              class="previous font-play text-ink-400 hover:text-ink-300"
+            >
+              Previous
+            </a>
+            {% else %}
+            <!-- <span class="previous font-play text-ink-400">Previous</span> -->
+            {% endif %}
+            <span class="page_number">
+              Page: {{ paginator.page }} of {{ paginator.total_pages }}
+            </span>
+            {% if paginator.next_page %}
+            <a
+              href="{{ paginator.next_page_path }}"
+              class="next font-play text-ink-400 hover:text-ink-300"
+              >Next</a
+            >
+            {% else %}
+            <!-- <span class="next font-play text-ink-400">Next</span> -->
+            {% endif %}
+          </div>
         </div>
       </div>
     </main>
 
-    <footer class="site-footer h-card">
+    <footer class="site-footer h-card grid grid-cols-1 justify-items-center">
       <data class="u-url" href="/"></data>
 
-      <div class="wrapper">
-          <div class="footer-col footer-col-3">
-            <p class="rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a></p>
-            <p>
-              © 2024 Andrew D.E. Smith
-            </p>
-          </div>
+      <div
+        class="wrapper ml-10 mr-10 max-w-5xl animate-fade-in-body opacity-0 animation-delay-500"
+      >
+        <div class="footer-col footer-col-3">
+          <p class="rss-subscribe sm:text-md mb-1 font-gelasio text-ink-600">
+            Subscribe
+            <a
+              class="hover:text-ink:300 font-gelasio text-ink-400"
+              href="/feed.xml"
+              >via RSS</a
+            >
+          </p>
+          <p class="sm:text-md mb-4 font-gelasio text-ink-600">
+            © 2024 Andrew D.E. Smith
+          </p>
         </div>
       </div>
     </footer>

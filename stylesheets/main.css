@@ -139,6 +139,10 @@
   max-height: 75vh;
 }
 
+.mr-0 {
+  margin-right: 0;
+}
+
 /* Cell phone in landscape mode.  */
 @media (max-height: 500px) {
   #caption-text {
