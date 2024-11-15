@@ -3,6 +3,6 @@ layout: post
 title:  "Test Post 1 Nov 14 2024"
 date:   "2024-11-14"
 categories: test update
-author: "Andrew"
+author: "Andrew D.E. Smith"
 ---
 Some test content.
