@@ -1,8 +1,6 @@
+/*---
 ---
-# This yaml frontmatter is required for jekyll to process the file
----
-
-/* Custom CSS and extraction of Tailwind components here. */
+*//* Custom CSS and extraction of Tailwind components here. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

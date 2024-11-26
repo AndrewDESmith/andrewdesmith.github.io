@@ -1,6 +1,11 @@
+/*---
+---
+*/
+
 /* Custom CSS and extraction of Tailwind components here. */
 
-/* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+*/
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -658,6 +663,10 @@ video {
   margin-bottom: 2.5rem;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -674,6 +683,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .mb-\[2\.5\%\] {
   margin-bottom: 2.5%;
 }
@@ -686,6 +699,10 @@ video {
   margin-left: 2.5rem;
 }
 
+.mr-0 {
+  margin-right: 0px;
+}
+
 .mr-10 {
   margin-right: 2.5rem;
 }
@@ -696,6 +713,10 @@ video {
 
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .mt-8 {
@@ -1022,6 +1043,10 @@ video {
   border-radius: 0.5rem;
 }
 
+.border-4 {
+  border-width: 4px;
+}
+
 .bg-lightGray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(252 252 253 / var(--tw-bg-opacity));
@@ -1110,6 +1135,11 @@ video {
 .text-ink-500 {
   --tw-text-opacity: 1;
   color: rgb(11 47 78 / var(--tw-text-opacity));
+}
+
+.text-ink-600 {
+  --tw-text-opacity: 1;
+  color: rgb(9 37 63 / var(--tw-text-opacity));
 }
 
 .text-red-600 {
@@ -1397,6 +1427,44 @@ video {
   }
 }
 
+/******************************************
+CSS used to format Jekyll post paragraphs
+******************************************/
+
+/*{: .mr-10.max-w-5xl.animate-fade-in-body.opacity-0.animation-delay-500.mb-2.font-gelasio.text-ink-500.sm:text-lg }*/
+
+.post p, .post pre {
+  margin-right: 2.5rem;
+  max-width: 64rem;
+  animation: fadeInBody 2s ease forwards;
+  opacity: 0;
+  animation-delay: 500ms;
+  margin-bottom: 1rem;
+  font-family: Gelasio Regular, serif;
+  --tw-text-opacity: 1;
+  color: rgb(11 47 78 / var(--tw-text-opacity));
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.post-meta {
+  font-family: Gelasio Bold, serif !important;
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+}
+
+@keyframes fadeInBody {
+  0% {
+    color: transparent;
+    opacity: 0;
+  }
+
+  100% {
+    color: #0B2F4E;
+    opacity: 1;
+  }
+}
+
 .hover\:cursor-pointer:hover {
   cursor: pointer;
 }
@@ -1531,6 +1599,11 @@ video {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 

@@ -40,7 +40,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag
-  # - jekyll-tailwindcss
+  - jekyll-tailwindcss
 sass:
   quiet_deps: true
   silence_deprecations: [import]

@@ -91,21 +91,21 @@ layout: embedded_blog_posts
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper grid grid-cols-1 justify-items-center">
-          <input type="text" id="search-input" class="font-gelasio text-ink-500 p-2" placeholder="Search blog posts...">
-          <ul id="results-container" class="font-gelasioBold text-ink-400"></ul>
+          <input type="text" id="search-input" class="font-gelasio text-ink-500 p-2 border-4 mb-8" placeholder="Search blog posts...">
+          <ul id="results-container" class="font-gelasioBold text-ink-400 mb-8"></ul>
 
         <div
           class="homeml-10 mr-10 max-w-5xl animate-fade-in-body opacity-0 animation-delay-500 mr-0"
         >
 
-          <h2 class="post-list-heading">Posts</h2>
+          <!-- <h2 class="post-list-heading">Posts</h2> -->
           <ul class="post-list">
             <span
               class=""
             >
               {% for post in paginator.posts %}
               <li class="mb-4 font-gelasioBold text-ink-500 sm:text-lg">
-                <span class="post-meta sm:text-sm"> {{ post.date | date: "%B %d, %Y" }} </span>
+                <span class="post-meta sm:text-xs" style="font-size: 0.750rem !important; line-height: 1rem !important;"> {{ post.date | date: "%B %d, %Y" }} </span>
                 <h3>
                   <span
                     class="font-gelasioBold text-ink-400 hover:text-ink-300 sm:text-lg"
@@ -124,7 +124,7 @@ layout: embedded_blog_posts
           </ul>
 
           <!-- Pagination links -->
-          <div class="pagination">
+          <div class="pagination mt-16">
             {% if paginator.previous_page %}
             <a
               href="{{ paginator.previous_page_path }}"
