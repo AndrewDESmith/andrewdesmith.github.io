@@ -437,5 +437,5 @@ var searchOptions = SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
   json: '/search.json',
-  searchResultTemplate: '<li><a href="{url}">{title}<p class="text-ember-400">{excerpt}</p></a></li><br/>'
+  searchResultTemplate: '<li><a href="{url}" class="hover:text-ink-300">{title}<p class="hover:text-ink-300">{excerpt}</p></a></li><br/>'
 });
