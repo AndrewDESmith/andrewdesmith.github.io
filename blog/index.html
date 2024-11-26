@@ -91,11 +91,11 @@ layout: embedded_blog_posts
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper grid grid-cols-1 justify-items-center">
-          <input type="text" id="search-input" class="font-gelasio text-ink-500 p-2 border-4 mb-8" placeholder="Search blog posts...">
+          <input type="text" id="search-input" class="font-gelasio text-ink-500 p-2 border-4 mb-8 animate-fade-in-body opacity-0 animation-delay-500" placeholder="Search blog posts...">
           <ul id="results-container" class="font-gelasioBold text-ink-400 mb-8"></ul>
 
         <div
-          class="homeml-10 mr-10 max-w-5xl animate-fade-in-body opacity-0 animation-delay-500 mr-0"
+          class="ml-10 mr-10 max-w-5xl animate-fade-in-body opacity-0 animation-delay-500 mr-0"
         >
 
           <!-- <h2 class="post-list-heading">Posts</h2> -->
@@ -122,56 +122,60 @@ layout: embedded_blog_posts
               {% endfor %}
             </span>
           </ul>
-
-          <!-- Pagination links -->
-          <div class="pagination mt-16">
-            {% if paginator.previous_page %}
-            <a
-              href="{{ paginator.previous_page_path }}"
-              class="previous font-play text-ink-400 hover:text-ink-300"
-            >
-              Previous
-            </a>
-            {% else %}
-            <!-- <span class="previous font-play text-ink-400">Previous</span> -->
-            {% endif %}
-            <span class="page_number">
-              Page: {{ paginator.page }} of {{ paginator.total_pages }}
-            </span>
-            {% if paginator.next_page %}
-            <a
-              href="{{ paginator.next_page_path }}"
-              class="next font-play text-ink-400 hover:text-ink-300"
-              >Next</a
-            >
-            {% else %}
-            <!-- <span class="next font-play text-ink-400">Next</span> -->
-            {% endif %}
-          </div>
         </div>
       </div>
     </main>
 
-    <footer class="site-footer h-card grid grid-cols-1 justify-items-center">
-      <data class="u-url" href="/"></data>
+    <footer class="site-footer h-card justify-items-center mt-8">
+      <div class="pagination-and-rss grid justify-items-center sm:grid-cols-2 max-w-5xl animate-fade-in-body opacity-0 animation-delay-500">
+        <!-- Pagination links -->
+        <div class="pagination mt-4">
+          {% if paginator.previous_page %}
+          <a
+            href="{{ paginator.previous_page_path }}"
+            class="previous font-play text-ink-400 hover:text-ink-300"
+          >
+            Previous
+          </a>
+          {% else %}
+          <!-- <span class="previous font-play text-ink-400">Previous</span> -->
+          {% endif %}
+          <span class="page_number">
+            Page: {{ paginator.page }} of {{ paginator.total_pages }}
+          </span>
+          {% if paginator.next_page %}
+          <a
+            href="{{ paginator.next_page_path }}"
+            class="next font-play text-ink-400 hover:text-ink-300"
+            >Next</a
+          >
+          {% else %}
+          <!-- <span class="next font-play text-ink-400">Next</span> -->
+          {% endif %}
+        </div>
 
-      <div
-        class="wrapper ml-10 mr-10 max-w-5xl animate-fade-in-body opacity-0 animation-delay-500"
-      >
-        <div class="footer-col footer-col-3">
-          <p class="rss-subscribe sm:text-md mb-1 font-gelasio text-ink-600">
-            Subscribe
-            <a
-              class="hover:text-ink:300 font-gelasio text-ink-400"
-              href="/feed.xml"
-              >via RSS</a
-            >
-          </p>
-          <p class="sm:text-md mb-4 font-gelasio text-ink-600">
-            © 2024 Andrew D.E. Smith
-          </p>
+        <div
+          class="wrapper ml-10 mr-10 max-w-5xl animate-fade-in-body opacity-0 animation-delay-500"
+        >
+
+          <data class="u-url" href="/"></data>
+
+          <div class="footer-col footer-col-3">
+            <p class="rss-subscribe sm:text-md mb-1 font-gelasio text-ink-600">
+              Subscribe
+              <a
+                class="hover:text-ink:300 font-gelasio text-ink-400"
+                href="/feed.xml"
+                >via RSS</a
+              >
+            </p>
+            <p class="sm:text-md mb-4 font-gelasio text-ink-600">
+              © 2024 Andrew D.E. Smith
+            </p>
+          </div>
         </div>
       </div>
+
     </footer>
   </body>
 </html>
