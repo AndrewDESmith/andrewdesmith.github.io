@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to Jekyll 5!"
 date:   "2024-11-13"
 categories: jekyll update
 author: "Andrew D.E. Smith"
