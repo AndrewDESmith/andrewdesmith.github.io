@@ -302,7 +302,7 @@ var _$src_8 = {};
     resultsContainer: null,
     json: [],
     success: Function.prototype,
-    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    searchResultTemplate: '<li><a href="{url}">{title}<p>{excerpt}</p></a></li><br/>',
     templateMiddleware: Function.prototype,
     sortMiddleware: function () {
       return 0
@@ -437,5 +437,5 @@ var searchOptions = SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
   json: '/search.json',
-  searchResultTemplate: '<li><a href="{url}">{title}</a></li>'
+  searchResultTemplate: '<li><a href="{url}">{title}<p class="text-ember-400">{excerpt}</p></a></li><br/>'
 });
