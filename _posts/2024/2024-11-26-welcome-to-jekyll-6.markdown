@@ -8,7 +8,7 @@ author: "Andrew D.E. Smith"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-{: .mr-10.max-w-5xl.animate-fade-in-body.opacity-0.animation-delay-500.mb-2.font-gelasio.text-ink-500.sm:text-lg }
+{: .mr-10.max-w-5xl.animate-fade-in-body.opacity-0.animation-delay-500.mb-2.font-gelasio.text-ink-500.sm:text-lg.xs:text-small }
 Jekyll requires blog post files to be named according to the following format:
 {: .text-ember-400}
 
