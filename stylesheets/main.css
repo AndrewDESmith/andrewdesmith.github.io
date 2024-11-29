@@ -219,3 +219,7 @@ CSS used to format Jekyll post paragraphs
     opacity: 1;
   }
 }
+
+/*#individual-post-content a:hover {
+  color: text-ink-300;
+}*/

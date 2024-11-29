@@ -1471,6 +1471,10 @@ CSS used to format Jekyll post paragraphs
   }
 }
 
+/*#individual-post-content a:hover {
+  color: text-ink-300;
+}*/
+
 .hover\:cursor-pointer:hover {
   cursor: pointer;
 }

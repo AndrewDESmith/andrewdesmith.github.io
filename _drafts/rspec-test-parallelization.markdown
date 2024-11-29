@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Draft 1"
+title:  "Test parallelization in RSpec"
 ---
 
 Some draft content.
