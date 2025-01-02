@@ -9,9 +9,19 @@ author: "Andrew D.E. Smith"
 
 Over the past few months, I've been working part-time on an overhaul of the RSpec test suites belonging to two mid-sized Ruby on Rails applications. Both possess a few hundred system tests, with nearly no existing unit tests. The system tests are great for regression testing and getting to understand how these applications are supposed to work.
 
-The problem was that these test suites were <i>SLOW</i>. It took over two hours to run both test suites on my mid-range 2022 desktop.
+The problem was that these test suites were <i>SLOW</i>. It took over two hours to run both test suites on my mid-range 2022 desktop PC.
 
-After some research and discussion, I first looked to the smaller and simpler of the two applications, using it as a testbed for the application of several tools and techniques to greatly speed up and increase the test suites' maintainability. The three techniques to test suite speed up have been: (1) Converting all test data to factory-built fixtures. (2) Parallelization of the tests, both inside and outside of a continuous integration environment. (3) Decoupling from other connected databases, both via pre-built fixtures and via pre-recorded server calls. So far these tools have consisted mainly of <a class="post-link" href="https://github.com/rdy/fixture_builder" target="_blank">fixture_builder</a>, <a class="post-link" href="https://github.com/grosser/parallel_tests" target="_blank">parallel_tests</a>, and <a class="post-link" href="https://github.com/vcr/vcr" target="_blank">vcr</a>. I'll get to the latter two tools in other posts, but this post will be discussing the `fixture_builder` gem.
+After some research and discussion, I first looked to the smaller and simpler of the two applications, using it as a testbed for the application of several tools and techniques to greatly speed up and increase the test suites' maintainability. The three techniques for test suite speed up have been:
+<br/>
+<br/>
+(1) Converting all test data to factory-built fixtures.
+<br/>
+(2) Parallelization of the tests, both inside and outside of a continuous integration environment.
+<br/>
+(3) Decoupling from other connected databases, both via pre-built fixtures and via pre-recorded server calls.
+<br/>
+<br/>
+So far these tools have consisted mainly of the <a class="post-link" href="https://github.com/rdy/fixture_builder" target="_blank">fixture_builder</a>, <a class="post-link" href="https://github.com/grosser/parallel_tests" target="_blank">parallel_tests</a>, and <a class="post-link" href="https://github.com/vcr/vcr" target="_blank">vcr</a> gems. I'll get to the latter two tools in other posts, but this post will be discussing the `fixture_builder` gem.
 
 First, some background.
 
@@ -19,9 +29,9 @@ A key aspect of any test suite is the test data. Two of the most common approach
 
 **Fixtures** are the default out of the box option for Rails, and are what I found in the smaller applications's test suite.  They are very fast, but can be difficult to maintain and reason about as an application grows larger and more complex.
 
-Here are two associated fixtures:
+Here are two associated example fixtures, similar to those that I inherited:
 
-```yml
+{% highlight yml %}
 # users.yml
 AcmeDirector:
   id: 9
@@ -36,13 +46,13 @@ AcmePlace:
   id: 127
   name: "Acme Inc."
   ...
-```
+{% endhighlight %}
 
 This doesn't look too bad. It's a bit annoying to have to link them up via numerical ID, but it's certainly manageable.
 
 What about more complex situations, such as join tables, whose tables in turn have their own associated tables?
 
-```yml
+{% highlight yml %}
 # offer_availability.yml
 PageDraftOffer:
   offer_id: 7
@@ -67,17 +77,17 @@ AcmePlace:
   id: 127
   name: "Acme Inc."
   ...
-```
+{% endhighlight %}
 
 Now developers have to hunt back and forth across at least four fixture files, matching by numerical IDs that otherwise have no logical meaning. If they require a variant of one of these fixtures, they need to create an entirely new fixture and wire up its associations, or tweak it with a database call during a test run.
 
-It certainly wasn't impossible to reason about these fixtures in their current state, but it was going to gradually become more painful to deal with this test data as the application grew in size and as new associations were added.
+It definitely wasn't impossible to reason about these fixtures in their current state, but it was going to gradually become more painful to deal with this test data as the application grew in size and as new associations were added.
 
-Meanwhile, the larger application's test suite used mostly direct object creation using the ActiveRecord ORM, and involved frequent switching back and forth with connections to different application databases. This also required on-the-fly creation of all associated objects during each test run, further slowing down the suite.
+Meanwhile, the larger application's test suite used mostly direct object creation using the ActiveRecord ORM, and involved frequent switching back and forth with connections to different application databases. This also required running one or more <a class="post-link" href="https://github.com/DatabaseCleaner/database_cleaner" target="_blank">database cleaning operations</a> during each test run, further slowing down the suite.
 
 Here is a common pattern for running a single system test in the larger application, using Capybara, RSpec, and the `database cleaner` gem:
 
-```ruby
+{% highlight ruby %}
   # specs/system/sale_view_spec.rb
   before(:all) do
     clean_databases # Potentially slows down the tests, depending on configuration.
@@ -122,7 +132,7 @@ Here is a common pattern for running a single system test in the larger applicat
     # More child table creation follows.
   end
 
-```
+{% endhighlight %}
 
 Other specs had even more on-the-fly object creation and/or updates, often squirrelled away in custom support modules, but hopefully readers get the general idea.
 
@@ -133,6 +143,18 @@ While it definitely would have been viable to leave the smaller application's fi
 That's when I came across the <a class="post-link" href="https://github.com/rdy/fixture_builder" target="_blank">fixture_builder</a> gem, which allows for the use of factories to create a set of fixtures. This is best shown with an example:
 
 ```ruby
+def foo
+  puts 'foo'
+end
+```
+
+{% highlight ruby %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
+{% highlight ruby %}
 # spec/support/fixture_builder.rb
   acme_client = name(
     :acme_client,
@@ -165,11 +187,12 @@ end
 
 # spec/system/_.rb
 (Use a before and after example with these simple fixtures here.)
-```
+
+{% endhighlight %}
 
 (Talk about the simple example above).
 
-Here's a more complex example, making full use of Factory Bot's traits, which is where this approach really starts to shine:
+Here's a more complex example, making full use of Factory Bot's <a class="post-link" href="https://github.com/thoughtbot/factory_bot/blob/main/GETTING_STARTED.md#traits" target="_blank">traits</a>, which is where this approach really starts to shine:
 
 ```ruby
 # spec/support/fixture_builder.rb
@@ -177,11 +200,8 @@ sale_active = name(:sale_active,
       # Factory invocation that uses multiple traits.
       FactoryBot.create(
         :sale_active,
-        :live_aasm_state,
-        :online,
-        ...
         :targeted,
-        client_id: game_place_client.id
+        client_id: acme_client.id
       )
 ).first
 
