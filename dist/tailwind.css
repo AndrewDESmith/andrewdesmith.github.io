@@ -1482,6 +1482,9 @@ CSS used to format Jekyll post paragraphs
 .highlight {
   background: #fff;
   @extend %vertical-rhythm;
+  pre {
+    font-size: 0.875rem !important;
+  }
   .highlighter-rouge & {
     background: #eef;
   }

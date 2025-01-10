@@ -231,6 +231,10 @@ CSS used to format Jekyll post paragraphs
   background: #fff;
   @extend %vertical-rhythm;
 
+  pre {
+    font-size: 0.875rem !important;
+  }
+
   .highlighter-rouge & {
     background: #eef;
   }
@@ -294,4 +298,8 @@ CSS used to format Jekyll post paragraphs
   .vg    { color: #008080 }
   .vi    { color: #008080 }
   .il    { color: #099 }
+}
+
+article.post {
+  padding-bottom: 10rem;
 }
