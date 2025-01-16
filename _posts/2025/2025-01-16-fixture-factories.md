@@ -50,7 +50,7 @@ AcmePlace:
 {% endhighlight %}
 <br/>
 
-This doesn't look too bad. It's a bit annoying to have to link them up via numerical ID, but it's certainly manageable.
+This doesn't look too bad. It's a bit annoying that these fixtures were linked up via numerical ID, but it's certainly manageable.
 
 What about more complex situations, such as join tables, whose tables in turn have their own associated tables?
 
@@ -85,7 +85,7 @@ AcmePlace:
 
 Now developers have to hunt back and forth across at least four fixture files, matching by numerical IDs that otherwise have no logical meaning. If they require a variant of one of these fixtures, they need to create an entirely new fixture and wire up its associations, or tweak it with a database call during a test run.
 
-It definitely wasn't impossible to reason about these fixtures in their current state, but it was going to gradually become more painful to deal with this test data as the application grew in size and as new associations were added.
+It definitely wasn't impossible to reason about these fixtures in their current state, but it was going to gradually become more painful to deal with this test data as the application grew in size and as new associations were added. Fixtures have other important limitations as well, such as the inability to trigger validations.
 
 As mentioned above, the larger application's test suite used mostly direct object creation using the ActiveRecord ORM, and involved frequent switching back and forth with connections to different application databases. Here is a common pattern for running a single system test in the larger application, using Capybara, RSpec, and the <a class="post-link" href="https://github.com/DatabaseCleaner/database_cleaner" target="_blank">database cleaner</a> gem:
 
@@ -93,7 +93,7 @@ As mentioned above, the larger application's test suite used mostly direct objec
 {% highlight ruby %}
 require 'rails_helper'
 
-# I've moderately obfuscated the code here, to protect client privacy.
+# I've moderately obfuscated and tweaked the code here, to protect client privacy.
 RSpec.feature "Sale Views E2E", type: :feature do
   # spec/system/sale_view_spec.rb
   sale_page_options = {
@@ -239,7 +239,7 @@ acme_client = name(
 sale_active = name(:sale_active,
   FactoryBot.create(
     :sale_active,
-    :targeted, # A trait containing other traits.
+    :targeted, # A trait containing other traits. See below.
     client_id: acme_client.id
   )
 ).first
@@ -252,7 +252,7 @@ category_with_acme_client_with_earings_name = name(:category_with_acme_client_wi
   )
 ).first
 
-# A join table. Much nicer than using numerical IDs.
+# A join table.
 sale_categorization_visible_active_sale = name(:sale_categorization_visible_active_sale,
   FactoryBot.create(
     :sale_categorization,
@@ -291,7 +291,7 @@ factory :offer do
 
   ...
 
-  # Child factory of offer. This can make us of all traits defined above in the parent offer factory.
+  # Child factory of offer. This can make use of all traits defined above in the parent :offer factory.
   factory :sale_active do
     title { "Sale Active" }
     code { "draft king" }
