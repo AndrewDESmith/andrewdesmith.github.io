@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Speeding Up System Tests Part 1: Factory-Built Fixtures"
-date: "2025-01-10"
+date: "2025-01-16"
 categories: testing
 tags: "ruby rails fixtures factories"
 author: "Andrew D.E. Smith"
@@ -15,13 +15,11 @@ The larger of the two test suites takes almost two hours for a full run. Beyond 
 
 After some research and discussion, I first looked to the smaller and simpler of the two applications, using it as a testbed for the application of several tools and techniques to greatly speed up and increase the test suites' maintainability. The three techniques for test suite speed up have been:
 <br/>
-<br/>
 (1) Converting all test data to factory-built fixtures.
-<br/>
+
 (2) Parallelization of the tests, both inside and outside of a continuous integration environment.
-<br/>
+
 (3) Decoupling from other connected databases, both via pre-built fixtures and via pre-recorded responses.
-<br/>
 <br/>
 So far these tools have consisted mainly of the <a class="post-link" href="https://github.com/rdy/fixture_builder" target="_blank">fixture_builder</a>, <a class="post-link" href="https://github.com/grosser/parallel_tests" target="_blank">parallel_tests</a>, and <a class="post-link" href="https://github.com/vcr/vcr" target="_blank">vcr</a> gems. I'll get to the latter two tools in other posts, but this post will be discussing the `fixture_builder` gem.
 
@@ -347,4 +345,4 @@ end
 
 That's it! We no longer need those helper methods, since we are now working with fixtures.  Admittedly the fixture construction does take time and care, and retains some of the complexity of the old approach.  However, the end result will be a much more performant test suite, once this work is complete.
 
-As of this posting, the smaller application has been successfully transistioned over to factory fixtures. Along with parallelization and pre-recorded HTTP responses from other servers, test suite run time was decreased from 19 minutes to 5 minutes on my desktop PC. I'm optimistic that the larger application will see even larger gains once work on it is complete.
+As of this posting, the smaller application has been successfully transistioned over to factory fixtures, and work has recently begun on the larger application. Along with parallelization and pre-recorded HTTP responses from other servers, test suite run time of the smaller app was decreased from 19 minutes to 5 minutes on my desktop PC. Meanwhile, two sets of system tests in the larger application have been reduced from 109 seconds to 9 seconds, and another from 73 seconds to 5 seconds. I'm optimistic that the larger application will see even larger overall gains once work on it is complete.
