@@ -1445,6 +1445,7 @@ CSS used to format Jekyll post paragraphs
   color: rgb(11 47 78 / var(--tw-text-opacity));
   font-size: 1.125rem;
   line-height: 1.75rem;
+  white-space: pre-wrap;
 }
 
 .post-meta {
@@ -1453,11 +1454,25 @@ CSS used to format Jekyll post paragraphs
   line-height: 1.5rem !important;
 }
 
-/*@media (max-width: 640px) {
-  #individual-post-content p {
-    font-size: 1rem !important;
+@media (max-width: 640px) {
+  #individual-post-content {
+    max-width: 90vw;
   }
-}*/
+
+  #individual-post-content p {
+    /*    font-size: 1rem !important;*/
+  }
+
+  pre {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media (min-width: 641px) {
+  pre {
+    font-size: 0.875rem !important;
+  }
+}
 
 @keyframes fadeInBody {
   0% {
@@ -1482,9 +1497,9 @@ CSS used to format Jekyll post paragraphs
 .highlight {
   background: #fff;
   @extend %vertical-rhythm;
-  pre {
+  /*  pre {
     font-size: 0.875rem !important;
-  }
+  }*/
   .highlighter-rouge & {
     background: #eef;
   }
@@ -1680,6 +1695,10 @@ CSS used to format Jekyll post paragraphs
   .il    {
     color: #099
   }
+}
+
+article.post {
+  padding-bottom: 10rem;
 }
 
 .hover\:cursor-pointer:hover {
