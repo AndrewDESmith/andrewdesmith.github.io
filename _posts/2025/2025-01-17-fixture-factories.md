@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Speeding Up System Tests Part 1: Factory-Built Fixtures"
-date: "2025-01-16"
+date: "2025-01-17"
 categories: testing
 tags: "ruby rails fixtures factories"
 author: "Andrew D.E. Smith"
@@ -21,7 +21,7 @@ After some research and discussion, I first looked to the smaller and simpler of
 
 (3) Decoupling from other connected databases, both via pre-built fixtures and via pre-recorded responses.
 <br/>
-So far these tools have consisted mainly of the <a class="post-link" href="https://github.com/rdy/fixture_builder" target="_blank">fixture_builder</a>, <a class="post-link" href="https://github.com/grosser/parallel_tests" target="_blank">parallel_tests</a>, and <a class="post-link" href="https://github.com/vcr/vcr" target="_blank">vcr</a> gems. I'll get to the latter two tools in other posts, but this post will be discussing the `fixture_builder` gem.
+So far these tools have consisted mainly of the <a class="post-link" href="https://github.com/rdy/fixture_builder" target="_blank">fixture_builder</a>, <a class="post-link" href="https://github.com/grosser/parallel_tests" target="_blank">parallel_tests</a>, and <a class="post-link" href="https://github.com/vcr/vcr" target="_blank">vcr</a> gems. I'll get to the latter two tools in future entries, but this post will be discussing the `fixture_builder` gem.
 
 First, some brief background discussion.
 

@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: The Blog of Andrew D.E. Smith
+title: Musings on Software and Other Curiousities
 email: andrewdesmith AT protonmail D0T com
 description: >- # this means to ignore newlines until "baseurl:"
   Primarily topics in full-stack web development, especially in the Ruby ecosystem.
