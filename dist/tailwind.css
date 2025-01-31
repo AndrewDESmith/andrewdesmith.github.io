@@ -1454,13 +1454,14 @@ CSS used to format Jekyll post paragraphs
   line-height: 1.5rem !important;
 }
 
+.post-image {
+  margin: auto;
+  max-height: 500px;
+}
+
 @media (max-width: 640px) {
   #individual-post-content {
     max-width: 90vw;
-  }
-
-  #individual-post-content p {
-    /*    font-size: 1rem !important;*/
   }
 
   pre {
@@ -1486,10 +1487,6 @@ CSS used to format Jekyll post paragraphs
   }
 }
 
-/*#individual-post-content a:hover {
-  color: text-ink-300;
-}*/
-
 /**
  * Syntax highlighting styles
  */
@@ -1497,9 +1494,6 @@ CSS used to format Jekyll post paragraphs
 .highlight {
   background: #fff;
   @extend %vertical-rhythm;
-  /*  pre {
-    font-size: 0.875rem !important;
-  }*/
   .highlighter-rouge & {
     background: #eef;
   }
