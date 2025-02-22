@@ -1,6 +1,10 @@
 ---
 layout: post
 title:  "Android E-ink Tablets as Healthier Middle Ground Digital Devices"
+date: "2025-02-21"
+categories: "general"
+tags: "e-ink e-reader android general health"
+author: "Andrew D.E. Smith"
 ---
 
 I've begun wanting to reduce my usage of smartphones and tablets.
@@ -33,7 +37,7 @@ Over the years, I've acquired a few hundred Kindle Store books, even reading a d
 
 However, I'm now experienced enough to see that these walled gardens can come to trap people, over time.  While Amazon has been pretty good about avoiding censorship, certainly in comparison to other software companies and content providers, there is no guarantee that such a relatively liberal attitude will endure. In fact, as I was writing this article, <a href="https://www.howtogeek.com/kindle-discontinues-download-transfer-via-usb/" target="_blank" class="post-link">Amazon announced the removal of its "Download & Transfer via USB" feature</a>. Whether this is a conscious attempt to discourage jumping out of their ecosystem and e-readers, an anti-piracy initiative, or something else, it reinforces the point that it's better to strive for flexibility and open standards, even at the cost of some convenience.
 
-In recent years, several Chinese companies have developed their own e-readers running customized versions of Android, with <a href="https://shop.boox.com/" target="_blank" class="post-link">Boox</a> and <a href="https://bigmestore.com/" target="_blank" class="post-link">Bigme</a> being two prominent examples.  Several models have SD card readers that can accept up to 2TB in storage, external speakers, and Bluetooth connectivity.  I have found an <a href="https://www.youtube.com/@ChalidRaqami" target="_blank" class="post-link">excellent review channel</a> for many of these Chinese e-readers.  Chalid Raqami, the channel's creator, is in fact probably the most thorough and engaging reviewer if you're looking for an accessible starting point to find out more about the now sizeable diversity of e-ink devices.
+In recent years, several Chinese companies have developed their own e-readers running customized versions of Android, with <a href="https://shop.boox.com/" target="_blank" class="post-link">Boox</a> and <a href="https://bigmestore.com/" target="_blank" class="post-link">Bigme</a> being two prominent examples.  Several models have SD card readers that can accept up to 2TB in storage, external speakers, and Bluetooth connectivity.  I have found an <a href="https://www.youtube.com/@ChalidRaqami" target="_blank" class="post-link">excellent review channel</a> for many of these Chinese e-readers.  Chalid Raqami, the channel's creator, is probably the most thorough and engaging reviewer if you're looking for an accessible starting point to find out more about the now sizeable diversity of e-ink devices.
 
 Seeing this, I began to think that perhaps these could end up being the "sweet spot" digital devices. E-books easily downloaded from multiple sources, blog articles and podcasts delivered via RSS feed, library e-books borrowed, and even a full music library, if desired.  I could also indulge my <a href="https://www.fanfiction.net/s/12184664/1/The-Catalyst-For-Revenge" target="_blank" class="post-link">guilty pleasure</a> of <a href="https://www.fanfiction.net/s/10457949/1/Living-an-Indoctrinated-Dream" target="_blank" class="post-link">Mass Effect</a> fan fiction.  On a larger screen, this would be a sweet graphic novel reader.  All of this without the distraction of a fluidly browsable internet.  Without videos.  Without the sleep disturbance brought by a flickering LCD screen, blasting its backlight into my retinas.
 
