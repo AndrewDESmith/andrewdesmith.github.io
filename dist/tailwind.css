@@ -1122,6 +1122,10 @@ video {
   line-height: 1rem;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .text-ember-500 {
   --tw-text-opacity: 1;
   color: rgb(184 38 1 / var(--tw-text-opacity));
