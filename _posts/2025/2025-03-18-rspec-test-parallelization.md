@@ -25,7 +25,7 @@ database: sales_test<%= ENV['TEST_ENV_NUMBER'] %>
 
 where "TEST_ENV_NUMBER" is an environment variable supplied by the `parallel_tests` gem. For this article, I'll be using "sales" as the name of the application.
 
-Next, create the parallel databases and load data into them:
+Next, create the parallel databases and load the schema:
 
 ```bash
 # From within your application's directory.
@@ -34,6 +34,8 @@ bundle exec rake parallel:load_schema
 ```
 
 You should then see a number of `sales_test` databases, equal to the threads on your computer's processors. E.g., a 10 core, 16 thread machine should give you 16 each of the databases (`sales_test`, `sales_test2`, `sales_test3`, ...). A database visualization tool can be helpful here.
+
+Test data will be loaded in as normal, either via fixtures, factories, or in-test scripted data creation, however your application normally accomplishes this.
 
 Next, you'll want to let your application know that it should be looking at multiple ports. Capybara is the standard tool used for Rails system tests. Configuration looks something like this:
 
