@@ -1463,6 +1463,11 @@ CSS used to format Jekyll post paragraphs
   max-height: 500px;
 }
 
+.post-image-large {
+  margin: auto;
+  max-height: 1000px;
+}
+
 @media (max-width: 640px) {
   #individual-post-content {
     max-width: 90vw;
